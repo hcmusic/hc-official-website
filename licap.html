@@ -7,14 +7,17 @@
 	<link rel="stylesheet" href="style/licap_style.css">
 </head>
 <body>
-	<header>
-		<img src="" alt="">
+	<header id="header">
+		<img id="top-logo" src="image/logo.svg" alt="">
+		<label for="menu-toggle"><img id="mini-menu" src="image/icon/mini-menu.png" alt=""></label>
+		<input type="checkbox" id="menu-toggle"/>
 		<nav id="header-nav">
 			<li><a href="index.html">HOME</a></li>
-			<li>LiCAP</li>
-			<li>SLiMTAB</li>
+			<li><a href="licap.html">LiCAP</a></li>
+			<!-- <li>SLiMTAB</li>
 			<li>ABOUT</li>
-			<li>FAQ</li>
+			<li>FAQ</li> -->
+			<li id="header-contact-us">CONTACT US</li>
 		</nav>
 	</header>
 	<main>
@@ -26,7 +29,12 @@
 		</section>
 		<section id="product">
 			<h4>Introduction</h4>
-			<div id="info"></div>
+			<div id="info">
+				<div id="info-content">
+					LiCAP is the world first one-piece wireless midi controller on your guitar.<br>LiCAP breaks the limite of your guitar on live perfroming and compose.<br><br>Easy installation on accoustic and electric guitars.
+				</div>
+			
+			</div>
 			<div id="up-spec">
 				<div id="in-spec">
 					<div id="spec">
@@ -92,14 +100,14 @@
 		<div id="footer-nav">
 			<div class="footer-series">
 				<div class="footer-title">Information</div>
-				<p>HOME</p>
-				<p>ABOUT</p>
-				<p>FAQ</p>
+				<p><a href="index.html">HOME</a></p>
+				<!-- <p>ABOUT</p>
+				<p>FAQ</p> -->
 			</div>
 			<div class="footer-series">
 				<div class="footer-title">Product</div>
-				<p>LiCAP</p>
-				<p>SLiMTAB</p>
+				<p><a href="licap.html">LiCAP</a></p>
+				<!-- <p>SLiMTAB</p> -->
 			</div>
 			<div class="footer-series">
 				<div class="footer-title">Contact US</div>
@@ -109,7 +117,7 @@
 					<img src="image/icon/youtube.svg" alt="">
 					<img src="image/icon/instagram.svg" alt="">
 				</div>
-				<p>+886 988732456</p>
+				<!-- <p>+886 988732456</p> -->
 				<div style="display: flex;">
 					<p>contact</p>
 					<img style="height: 20px;" src="image/icon/at.svg" alt="">
@@ -124,7 +132,7 @@
 				<img src="image/icon/youtube.svg" alt="">
 				<img src="image/icon/instagram.svg" alt="">
 			</div>
-			<p>+886 988732456</p>
+			<!-- <p>+886 988732456</p> -->
 			<div style="display: flex;">
 				<p>contact</p>
 				<img src="image/icon/at.svg" alt="">
@@ -134,4 +142,15 @@
 		<p class="copyight">Copyright © 2019 HcMusic  CO. LTD. All Rights Reserved.</p>
 	</footer>
 </body>
+<script>
+	let header = document.getElementById("header");
+	window.onscroll = function() { 
+		if (document.body.scrollTop !=0 || document.documentElement.scrollTop !=0 ) {
+			header.classList.add("black-background");
+		} 
+		else {
+			header.classList.remove("black-background");
+		}
+	};
+</script>
 </html>

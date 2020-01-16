@@ -13,7 +13,11 @@ header {
 	align-items: center;
 	position: fixed;
 	top: 0;
-    z-index: 999;
+	z-index: 999;
+	justify-content: space-between;
+}
+#mini-menu, #menu-toggle {
+	display: none;
 }
 footer {
 	height: 250px;
@@ -25,18 +29,24 @@ section {
 	height: 80vh;
 	min-height: 700px;
 }
+a {
+	color: unset;
+    text-decoration: unset;
+}
 h4 {
 	margin: 0 0 15px 0;
 	font-size: 1.5em;
 }
+.black-background {
+	background-color: black;
+}
 #header-nav {
 	display: flex;
-	justify-content: space-evenly;
-	padding: 0;
-	margin: 0;
-	width: 80%;
-	min-width: 300px;
-	max-width: 550px;
+    justify-content: flex-end;
+    padding-right: 23px;
+    margin-right: 38px;
+    min-width: 300px;
+    max-width: 550px;
 }
 #header-nav a {
 	color: #d6d6d6;
@@ -46,7 +56,11 @@ h4 {
 	color: #fff;
 	text-decoration: unset;
 }
+#top-logo {
+	padding-left: 23px;
+}
 #header-nav li {
+	padding: 0px 15.5px;
 	color: #d6d6d6;
 	list-style: none;
 	cursor: pointer;
@@ -82,6 +96,13 @@ h4 {
 #info {
 	background-color: #ececec;
 	height: 600px;
+}
+#info-content {
+	width: 40%;
+	margin-left: 10%;
+	padding-top: 21px;
+    font-size: 1.3em;
+    line-height: 35px;
 }
 #up-spec {
 	width: 100%;
