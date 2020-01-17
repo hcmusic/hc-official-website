@@ -137,7 +137,7 @@ main input[name=faq-radios]{
 .qa-group {
     position: relative;
     width: 100%;
-    background: rgba(255,255,255,0.19);
+    background: rgba(255,255,255,0.15);
     left: 0%;
     margin-top: 8px;
 }
@@ -174,53 +174,55 @@ main input[name=faq-radios]{
     display: none;
     padding: 0px 90px 20px 35px;
     font-size: 16px;
+    font-weight: bold;
+    color: #AAAAAA;
     line-height: 22px;
 }
 .qa-checkbox { display: none; }
-#live-q1:checked ~ #live-qa1 { background: rgba(255,255,255,0.3); }
+#live-q1:checked ~ #live-qa1 { background: rgba(255,255,255,0.23); }
 #live-q1:checked ~ #live-qa1 .qa-answer { display: block; }
 #live-q1:checked ~ #live-qa1 .qa-question::after { transform: rotate(180deg); }
 
-#live-q2:checked ~ #live-qa2 { background: rgba(255,255,255,0.3); }
+#live-q2:checked ~ #live-qa2 { background: rgba(255,255,255,0.23); }
 #live-q2:checked ~ #live-qa2 .qa-answer { display: block; }
 #live-q2:checked ~ #live-qa2 .qa-question::after { transform: rotate(180deg); }
 
-#live-q3:checked ~ #live-qa3 { background: rgba(255,255,255,0.3); }
+#live-q3:checked ~ #live-qa3 { background: rgba(255,255,255,0.23); }
 #live-q3:checked ~ #live-qa3 .qa-answer { display: block; }
 #live-q3:checked ~ #live-qa3 .qa-question::after { transform: rotate(180deg); }
 
-#recording-q1:checked ~ #recording-qa1 { background: rgba(255,255,255,0.3); }
+#recording-q1:checked ~ #recording-qa1 { background: rgba(255,255,255,0.23); }
 #recording-q1:checked ~ #recording-qa1 .qa-answer { display: block; }
 #recording-q1:checked ~ #recording-qa1 .qa-question::after { transform: rotate(180deg); }
 
-#recording-q2:checked ~ #recording-qa2 { background: rgba(255,255,255,0.3); }
+#recording-q2:checked ~ #recording-qa2 { background: rgba(255,255,255,0.23); }
 #recording-q2:checked ~ #recording-qa2 .qa-answer { display: block; }
 #recording-q2:checked ~ #recording-qa2 .qa-question::after { transform: rotate(180deg); }
 
-#recording-q3:checked ~ #recording-qa3 { background: rgba(255,255,255,0.3); }
+#recording-q3:checked ~ #recording-qa3 { background: rgba(255,255,255,0.23); }
 #recording-q3:checked ~ #recording-qa3 .qa-answer { display: block; }
 #recording-q3:checked ~ #recording-qa3 .qa-question::after { transform: rotate(180deg); }
 
-#sharing-q1:checked ~ #sharing-qa1 { background: rgba(255,255,255,0.3); }
+#sharing-q1:checked ~ #sharing-qa1 { background: rgba(255,255,255,0.23); }
 #sharing-q1:checked ~ #sharing-qa1 .qa-answer { display: block; }
 #sharing-q1:checked ~ #sharing-qa1 .qa-question::after { transform: rotate(180deg); }
 
-#sharing-q2:checked ~ #sharing-qa2 { background: rgba(255,255,255,0.3); }
+#sharing-q2:checked ~ #sharing-qa2 { background: rgba(255,255,255,0.23); }
 #sharing-q2:checked ~ #sharing-qa2 .qa-answer { display: block; }
 #sharing-q2:checked ~ #sharing-qa2 .qa-question::after { transform: rotate(180deg); }
 
-#sharing-q3:checked ~ #sharing-qa3 { background: rgba(255,255,255,0.3); }
+#sharing-q3:checked ~ #sharing-qa3 { background: rgba(255,255,255,0.23); }
 #sharing-q3:checked ~ #sharing-qa3 .qa-answer { display: block; }
 #sharing-q3:checked ~ #sharing-qa3 .qa-question::after { transform: rotate(180deg); }
 
-#practicing-q1:checked ~ #practicing-qa1 { background: rgba(255,255,255,0.3); }
+#practicing-q1:checked ~ #practicing-qa1 { background: rgba(255,255,255,0.23); }
 #practicing-q1:checked ~ #practicing-qa1 .qa-answer { display: block; }
 #practicing-q1:checked ~ #practicing-qa1 .qa-question::after { transform: rotate(180deg); }
 
-#practicing-q2:checked ~ #practicing-qa2 { background: rgba(255,255,255,0.3); }
+#practicing-q2:checked ~ #practicing-qa2 { background: rgba(255,255,255,0.23); }
 #practicing-q2:checked ~ #practicing-qa2 .qa-answer { display: block; }
 #practicing-q2:checked ~ #practicing-qa2 .qa-question::after { transform: rotate(180deg); }
 
-#practicing-q3:checked ~ #practicing-qa3 { background: rgba(255,255,255,0.3); }
+#practicing-q3:checked ~ #practicing-qa3 { background: rgba(255,255,255,0.23); }
 #practicing-q3:checked ~ #practicing-qa3 .qa-answer { display: block; }
 #practicing-q3:checked ~ #practicing-qa3 .qa-question::after { transform: rotate(180deg); }
