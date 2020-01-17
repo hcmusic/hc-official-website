@@ -12,11 +12,11 @@
 		<label for="menu-toggle"><img id="mini-menu" src="image/icon/mini-menu.png" alt=""></label>
 		<input type="checkbox" id="menu-toggle"/>
 		<nav id="header-nav">
-			<a href="licap.html"><li>LiCAP</li></a>
+			<li><a href="licap.html">LiCAP</a></li>
 			<!-- <li>SLiMTAB</li>
-			<li>ABOUT</li>
-			<li>FAQ</li> -->
-			<a><li id="header-contact-us">CONTACT US</li></a>
+			<li>ABOUT</li> -->
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="#footer-nav">CONTACT US</a></li>
 		</nav>
 	</header>
 	<section id="first">
@@ -102,9 +102,9 @@
 		<div id="footer-nav">
 			<div class="footer-series">
 				<div class="footer-title">Information</div>
-				<p>HOME</p>
-				<!-- <p>ABOUT</p>
-				<p>FAQ</p> -->
+				<!-- <p>HOME</p> -->
+				<!-- <p>ABOUT</p> -->
+				<p><a href="faq.html">FAQ</a></p>
 			</div>
 			<div class="footer-series">
 				<div class="footer-title">Product</div>
@@ -146,11 +146,6 @@
 			header.classList.remove("black-background");
 		}
 	};
-	let hcontact = document.getElementById("header-contact-us");
-	hcontact.onclick = function() {
-		document.body.scrollTop = 9999;
-		document.documentElement.scrollTop = 9999;
-	}
 	document.getElementById("product-licap").onclick = function() {
 		window.location.href = "licap.html";
 	}
