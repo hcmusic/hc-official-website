@@ -78,7 +78,7 @@ h3 {
     display: inline-block;
 }
 
-#header-nav li:last-child::after{
+#header-nav a:last-child li::after{
 	width: 0px;
 }
 
