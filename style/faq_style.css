@@ -61,14 +61,14 @@ header {
     content: "";
     display: inline-block;
 }
-#header-nav li:last-child::after{
+#header-nav a:last-child li::after{
 	width: 0px;
 }
 #header-nav li:hover {
 	color: #fff;
 }
 .on-this-page {
-	border-bottom: 1px solid #d6d6d6;
+	text-decoration: underline
 }
 #faq-title {
     font-size: 70px;
