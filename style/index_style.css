@@ -61,6 +61,7 @@ h3 {
 }
 #top-logo {
 	padding-left: 23px;
+	transform: translateY(2px);
 }
 #header-nav li {
 	padding: 0px 15.5px;
@@ -78,7 +79,7 @@ h3 {
     display: inline-block;
 }
 
-#header-nav li:last-child::after{
+#header-nav a:last-child li::after{
 	width: 0px;
 }
 
