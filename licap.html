@@ -13,14 +13,21 @@
 		<input type="checkbox" id="menu-toggle"/>
 		<nav id="header-nav">
 			<li><a href="index.html">HOME</a></li>
+			<li><a id="nav-licap-label" href="licap.html">LiCAP</a></li>
 			<li><a href="faq.html">FAQ</a></li>
 			<!-- <li>SLiMTAB</li>
 			<li>ABOUT</li>
 			<li>FAQ</li> -->
-			<a href="index.html#footer-nav"><li>CONTACT US</li></a>
+			<li><a href="#footer-nav">CONTACT US</a></li>
 		</nav>
 	</header>
 	<main>
+		<section id="slogan">
+			<div class="show-block">
+				<p>Play im<span id="midi">MIDI</span>ately</p>
+			</div>
+			<div class="black-block"></div>
+		</section>
 		<section id="first">
 			<div id="display">
 				<img src="image/icon/arrow-right.svg" alt="">
@@ -34,9 +41,9 @@
 				<div id="info-content">
 					LiCAP is the world first one-piece wireless midi controller on your guitar.<br>LiCAP breaks the limite of your guitar on live perfroming and compose.<br><br>Easy installation on accoustic and electric guitars.
 				</div>
-			
+				<img src="./image/old_licap_boom.png" alt="">
 			</div>
-			<div id="up-spec">
+			<!-- <div id="up-spec">
 				<div id="in-spec">
 					<div id="spec">
 						<h4>Spec</h4>
@@ -88,57 +95,89 @@
 						</div>
 					</div>
 				</div>				
-			</div>
+			</div> -->
 		</section>
-		<section id="slogan">
-			<div class="show-block">
-				<p>play imMIDIately.</p>
+		<section id="spec">
+			<h4>Technical Specs</h4>
+			<div class="every-spec">
+				<div class="spec-block">
+					<div class="title">Dimension</div>
+					<div class="spec-content">105 x 24 x 6 mm (LxWxH)</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">Bluetooth</div>
+					<div class="spec-content">V5.0 BLE</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">RF Range</div>
+					<div class="spec-content">15M</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">Battery Life</div>
+					<div class="spec-content">2hrs on working /stand by 200hrs</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">USB</div>
+					<div class="spec-content">support USB PD3.0</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">Weight</div>
+					<div class="spec-content">220g</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">Warranty</div>
+					<div class="spec-content">1 year</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">Accessory</div>
+					<div class="spec-content">USB Charger / Type C Cable</div>
+				</div>
+				<div class="spec-block">
+					<div class="title">Software</div>
+					<div class="spec-content">LiCON MIDI CC Mapping Application</div>
+				</div>
 			</div>
-			<div class="black-block"></div>
 		</section>
 	</main>
 	<footer>
 		<div id="footer-nav">
 			<div class="footer-series">
-				<div class="footer-title">Information</div>
-				<p><a href="index.html">HOME</a></p>
-				<!-- <p>ABOUT</p>
-				<p>FAQ</p> -->
-				<p><a href="faq.html">FAQ</a></p>
-			</div>
-			<div class="footer-series">
-				<div class="footer-title">Product</div>
-				<p><a href="licap.html">LiCAP</a></p>
-				<!-- <p>SLiMTAB</p> -->
-			</div>
-			<div class="footer-series">
-				<div class="footer-title">Contact US</div>
+				<div class="footer-btn">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="">ABOUT</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="">WORK WITH US</a></li>
+				</div>
 				<div id="footer-link">
 					<img src="image/icon/twitter.svg" alt="">
 					<img src="image/icon/facebook.svg" alt="">
 					<img src="image/icon/youtube.svg" alt="">
 					<img src="image/icon/instagram.svg" alt="">
 				</div>
-				<!-- <p>+886 988732456</p> -->
-				<div style="display: flex;">
-					<p>contact</p>
-					<img style="height: 20px;" src="image/icon/at.svg" alt="">
-					<p>thehcmusic.com</p>
-				</div>
+			</div>
+			<div class="footer-series">
+				<p style="cursor:unset;">(+886)937-626-316</p>
+				<p style="cursor:unset;">contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+				<p style="cursor:unset;">10F., No. 6-1, Sec. 1, Mingde Rd., Tucheng Dist., <br>New Taipei City 236, Taiwan</p>
 			</div>
 		</div>
 		<div id="phone-footer-nav">
+			<div class="footer-btn">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="">ABOUT</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="">WORK WITH US</a></li>
+			</div>
 			<div id="footer-link">
 				<img src="image/icon/twitter.svg" alt="">
 				<img src="image/icon/facebook.svg" alt="">
 				<img src="image/icon/youtube.svg" alt="">
 				<img src="image/icon/instagram.svg" alt="">
 			</div>
-			<!-- <p>+886 988732456</p> -->
-			<div style="display: flex;">
-				<p>contact</p>
-				<img src="image/icon/at.svg" alt="">
-				<p>thehcmusic.com</p>
+			<div class="contact-block">
+				<p style="cursor:unset;">(+886)937-626-316</p>
+				<p>contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+				<p style="cursor:unset;">10F., No. 6-1, Sec. 1, Mingde Rd., Tucheng Dist., <br>New Taipei City 236, Taiwan</p>
 			</div>
 		</div>
 		<p class="copyight">Copyright © 2019 HcMusic  CO. LTD. All Rights Reserved.</p>
@@ -154,6 +193,8 @@
 			header.classList.remove("black-background");
 		}
 	};
+	let licap = document.getElementById('nav-licap-label');
+	licap.classList.add("on-this-page")
 </script>
 <script src="https://threejs.org/build/three.min.js"></script>
 <script src="lib/STLLoader.js"></script>

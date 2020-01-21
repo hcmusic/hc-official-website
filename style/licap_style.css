@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Righteous&display=swap');
 
 body {
 	box-sizing: border-box;
@@ -20,7 +20,7 @@ header {
 	display: none;
 }
 footer {
-	height: 250px;
+	height: 200px;
 	background-color: #050E16; 
 	padding-top: 48px;
 	position: relative;
@@ -77,11 +77,12 @@ h4 {
     content: "";
     display: inline-block;
 }
-
 #header-nav li:last-child::after{
 	width: 0px;
 }
-
+.on-this-page {
+	border-bottom: 1px solid #d6d6d6;
+}
 #first {
 	background-color: #242424;
 	display: flex;
@@ -94,7 +95,7 @@ h4 {
 	justify-content: space-between;
 }
 #display img{
-	opacity: .3;
+	opacity: .5;
 }
 /*product*/
 #product{
@@ -104,13 +105,14 @@ h4 {
 	position: relative;
 }
 #product h4 {
-	width: 80%;
+	width: 40%;
 	max-width: 1366px;
-	margin: 0 auto 20px;
+	margin: 0 0 20px 10%;
 }
 #info {
 	background-color: #ececec;
-	height: 600px;
+	display: flex;
+	align-items: center;
 }
 #info-content {
 	width: 40%;
@@ -118,6 +120,9 @@ h4 {
 	padding-top: 21px;
     font-size: 1.3em;
     line-height: 35px;
+}
+#info img {
+	width: 40%;
 }
 #up-spec {
 	width: 100%;
@@ -140,17 +145,18 @@ h4 {
 	height: 100%;
 }
 #spec {
-	background-color: #DDDFE3;
-	width: 50%;
 	min-width: 400px;
-	height: 100%;
+	margin-top: 60px;
+	height: 50vh;
 }
 #spec h4 {
-	margin: 10px auto 20px ;
+	width: 40%;
+	max-width: 1366px;
+	margin: 0 0 20px 10%;
 }
 .every-spec {
 	width: 80%;
-	margin: 35px auto 0;
+	margin: 60px auto 0;
 }
 .spec-block {
 	display: grid;
@@ -175,8 +181,7 @@ h4 {
 	background-image: url("../image/licap-pic.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center -5%;
-	background-attachment: fixed;
+	background-position: center 40%;
 	position: relative;
 }
 #slogan p {
@@ -184,6 +189,10 @@ h4 {
     color: #fff;
     font-size: 4.5em;
     letter-spacing: 5px;
+}
+#midi {
+	font-family: 'Righteous', cursive;
+	font-size: 80px;
 }
 .show-block {
 	width: 100%;
@@ -212,9 +221,8 @@ h4 {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-around;
-	width: 65%;
-    max-width: 750px;
-    min-width: 600px;
+    max-width: 1000px;
+	margin: 0 auto;
 }
 .footer-title {
 	font-size: 20px;
@@ -233,17 +241,79 @@ h4 {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	margin-bottom: 23px;
 }
 #footer-link img {
 	height: 25px;
 	display: block;
 	cursor: pointer;
 }
+.footer-series p {
+	font-size: 17px;
+	color: #fff;
+    margin: 0 0 5px 0;
+    cursor: pointer;
+}
+.footer-btn {
+	display: flex;
+}
+.footer-btn li {
+	padding: 0 15.5px;
+	color: #fff;
+	list-style: none;
+	cursor: pointer;
+}
+.footer-btn li::after {
+    position: relative;
+    left: 15.5px;
+    width: 1px;
+    height: 12px;
+    background: #d6d6d6;
+    content: "";
+    display: inline-block;
+}
+.footer-btn li:last-child::after {
+	display: none;
+}
+#footer-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 17px;
+	width: 50%;
+}
+#footer-link img {
+	height: 20px;
+	display: block;
+	cursor: pointer;
+}
 .copyight {
 	color: #fff;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 14px;
+	font-size: 14px;
+	width: 90%;
+	margin: 50px auto 0;
+	border-top: 1px #fff solid;
+	text-align: center;
+	padding-top: 15px;
+}
+.email-at {
+	width: 15px;
+	padding: 0px 1px;
+	transform: translateY(3px);
+}
+@media (max-width: 950px) {
+	.footer-btn {
+		display: unset
+	}
+	#footer-link {
+		width: unset;
+	}
+	.footer-btn li {
+		margin-bottom: 5px;
+	}
+	.footer-btn li::after{
+		display: none;
+	}
+	.copyight {
+		margin: 25px auto 0;
+	}
 }

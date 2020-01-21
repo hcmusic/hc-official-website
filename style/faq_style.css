@@ -67,6 +67,9 @@ header {
 #header-nav li:hover {
 	color: #fff;
 }
+.on-this-page {
+	border-bottom: 1px solid #d6d6d6;
+}
 #faq-title {
     font-size: 70px;
     margin-top: 60px;

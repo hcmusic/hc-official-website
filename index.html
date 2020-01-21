@@ -12,7 +12,7 @@
 		<label for="menu-toggle"><img id="mini-menu" src="image/icon/mini-menu.png" alt=""></label>
 		<input type="checkbox" id="menu-toggle"/>
 		<nav id="header-nav">
-			<li><a href="index.html">HOME</a></li>
+			<li><a  id="nav-home-label" href="index.html">HOME</a></li>
 			<li><a href="licap.html">LiCAP</a></li>
 			<!-- <li>SLiMTAB</li>
 			<li>ABOUT</li> -->
@@ -85,7 +85,7 @@
 			<h3>PRACTICE</h3>
 			<p>
 				WERE YOU RUSHING or WERE YOU DRAGGING ?<br>
-				Well, you can SEE the difference now.<br>
+				Well, you can SEE the difference now.
 				Customize the playing speed.<br>
 				Practice makes you perfect on stage.
 			</p>
@@ -101,16 +101,13 @@
 	</main>
 	<footer>
 		<div id="footer-nav">
-			<div class="footer-series">
+			<!-- <div class="footer-series">
 				<div class="footer-title">Information</div>
-				<!-- <p>HOME</p> -->
-				<!-- <p>ABOUT</p> -->
 				<p><a href="faq.html">FAQ</a></p>
 			</div>
 			<div class="footer-series">
 				<div class="footer-title">Product</div>
 				<p><a href="licap.html">LiCAP</a></p>
-				<!-- <p>SLiMTAB</p> -->
 			</div>
 			<div class="footer-series">
 				<div class="footer-title">Contact US</div>
@@ -120,19 +117,46 @@
 					<img src="image/icon/youtube.svg" alt="">
 					<img src="image/icon/instagram.svg" alt="">
 				</div>
-				<!-- <p>+886 988732456</p> -->
 				<p>contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+			</div> -->
+			<div class="footer-series">
+				<div class="footer-btn">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="">ABOUT</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="">WORK WITH US</a></li>
+				</div>
+				<div id="footer-link">
+					<img src="image/icon/twitter.svg" alt="">
+					<img src="image/icon/facebook.svg" alt="">
+					<img src="image/icon/youtube.svg" alt="">
+					<img src="image/icon/instagram.svg" alt="">
+				</div>
+			</div>
+			<div class="footer-series">
+				<p style="cursor:unset;">(+886)937-626-316</p>
+				<p style="cursor:unset;">contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+				<p style="cursor:unset;">10F., No. 6-1, Sec. 1, Mingde Rd., Tucheng Dist., <br>New Taipei City 236, Taiwan</p>
 			</div>
 		</div>
 		<div id="phone-footer-nav">
+			<div class="footer-btn">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="">ABOUT</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="">WORK WITH US</a></li>
+			</div>
 			<div id="footer-link">
 				<img src="image/icon/twitter.svg" alt="">
 				<img src="image/icon/facebook.svg" alt="">
 				<img src="image/icon/youtube.svg" alt="">
 				<img src="image/icon/instagram.svg" alt="">
 			</div>
-			<!-- <p>+886 988732456</p> -->
-			<p>contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+			<div class="contact-block">
+				<p style="cursor:unset;">(+886)937-626-316</p>
+				<p>contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+				<p style="cursor:unset;">10F., No. 6-1, Sec. 1, Mingde Rd., Tucheng Dist., <br>New Taipei City 236, Taiwan</p>
+			</div>
 		</div>
 		<p class="copyight">Copyright © 2019 HcMusic  CO. LTD. All Rights Reserved.</p>
 	</footer>
@@ -153,5 +177,8 @@
 	document.getElementById("product-faq").onclick = function() {
 		window.location.href = "faq.html";
 	}
+
+	let home = document.getElementById("nav-home-label");
+	home.classList.add("on-this-page")
 </script>
 </html>
