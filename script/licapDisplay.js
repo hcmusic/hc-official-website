@@ -2,11 +2,16 @@ var displayElement = document.getElementById("licap-model");
 var loader = new THREE.STLLoader();
 var scene = new THREE.Scene();
 var width = window.innerWidth * 0.8 - 310;
-var camera = new THREE.PerspectiveCamera( 40, width/500 , 0.1, 1000 );
+var height = 500;
+if(window.innerWidth <= 670) {
+    width = window.innerWidth*0.9;
+    height = width;
+}
+var camera = new THREE.PerspectiveCamera( 40, width/height , 0.1, 1000 );
 camera.position.z = 5;
 
 var renderer = new THREE.WebGLRenderer({alpha: true});
-renderer.setSize( width, 500 );
+renderer.setSize( width, height);
 displayElement.appendChild( renderer.domElement );
 
 var light = new THREE.PointLight(0xffffff, 1);
@@ -28,6 +33,7 @@ loader.load( './tdmodel/Cap.stl', function(obj) {
     obj.applyMatrix( new THREE.Matrix4().makeTranslation(-40, -13, -5));
     cap = new THREE.Mesh(obj, capMat);
     cap.position.z = -150;
+    if(window.innerWidth <= 670) cap.position.z = -200;
     scene.add( cap );
     isLoaded = true;
     cap.rotation.y = -0.5;
@@ -54,5 +60,33 @@ displayElement.onmousemove = function(ev) {
         cap.rotation.y = cry + (ev.clientX - mdx)*0.015;
         cap.rotation.x = crx + (ev.clientY - mdy)*0.015;
         requestAnimationFrame( animate );
+    }
+}
+
+var rotRight = document.getElementById("rotate-right");
+var rotLeft = document.getElementById("rotate-left");
+var rotSpeed = 0;
+var rotAnimeHandler = 0;
+function rotateAnime(){
+    cap.rotation.y += rotSpeed;
+    renderer.render( scene, camera );
+    rotAnimeHandler = requestAnimationFrame(rotateAnime);
+}
+rotRight.onclick = function(){
+    cancelAnimationFrame(rotAnimeHandler)
+    if(rotSpeed >= 0){
+        rotSpeed = -0.01;
+        rotAnimeHandler = requestAnimationFrame(rotateAnime);
+    }else{
+        rotSpeed = 0;
+    }
+}
+rotLeft.onclick = function(){
+    cancelAnimationFrame(rotAnimeHandler)
+    if(rotSpeed <= 0){
+        rotSpeed = 0.01;
+        rotAnimeHandler = requestAnimationFrame(rotateAnime);
+    }else{
+        rotSpeed = 0;
     }
 }
