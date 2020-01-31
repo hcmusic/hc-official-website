@@ -21,7 +21,7 @@ header {
 }
 footer {
 	height: 200px;
-	background-color: #050E16; 
+	background-color: #160505; 
 	padding-top: 48px;
 	position: relative;
 }
@@ -38,7 +38,7 @@ h4 {
 	font-size: 1.5em;
 }
 .black-background {
-	background-color: black;
+	background-color: #160505;
 }
 #header-nav {
 	display: flex;
@@ -109,7 +109,17 @@ h4 {
 #product h4 {
 	width: 40%;
 	max-width: 1366px;
-	margin: 0 0 20px 10%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+#product h4::before {
+	content: "";
+	width: 20%;
+	height: 10px;
+	background: #e01E0a;
+	border-radius: 0  20px 20px 0;
+	margin-right: 5%;
 }
 #info {
 	background-color: #ececec;
@@ -152,9 +162,18 @@ h4 {
 	height: 50vh;
 }
 #spec h4 {
+	display: flex;
+	align-items: center;
 	width: 40%;
 	max-width: 1366px;
-	margin: 0 0 20px 10%;
+}
+#spec h4::before {
+	content: "";
+	width: 20%;
+	height: 10px;
+	background: #e01E0a;
+	border-radius: 0  20px 20px 0;
+	margin-right: 5%;
 }
 .every-spec {
 	width: 80%;
@@ -180,7 +199,7 @@ h4 {
 #slogan {
 	height: 300px;
 	min-height: unset;
-	background-image: url("../image/licap-pic.jpg");
+	background-image: url("../image/licap-pic-red.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center 40%;
@@ -195,6 +214,7 @@ h4 {
 #midi {
 	font-family: 'Righteous', cursive;
 	font-size: 80px;
+	color: #e01e0a;
 }
 .show-block {
 	width: 100%;
@@ -330,7 +350,7 @@ h4 {
 		height: unset;
 	}
 	#header {
-		background: black;
+		background: #160505;
 		height: 60px;
 	}
 	#mini-menu {
@@ -371,7 +391,21 @@ h4 {
 		-webkit-text-stroke: unset;
 		color: #fff;
 	}
-
+	#product h4 {
+		width: unset;
+		margin: 0 auto 20px;
+	}
+	#spec h4 {
+		width: unset;
+		margin: auto;
+	}
+	#product h4::before, #spec h4::before {
+		/* width: 10px;
+		border-radius: 30px;; */
+	}
+	#info img {
+		width: 80%;
+	}
 	/*footer*/
 	#footer-nav {
 		display: none;
@@ -437,19 +471,12 @@ h4 {
 	#product {
 		margin-top: 20px;
 	}
-	#product h4 {
-		margin: 0 auto 20px;
-	}
 	#info {
 		flex-direction: column-reverse;
 	}
 	#info-content {
 		width: 85%;
 		margin: 0px auto 21px;
-	}
-	#spec h4 {
-		width: fit-content;
-		margin: auto;
 	}
 	.every-spec {
 		margin-top: 30px;
