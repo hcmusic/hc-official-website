@@ -28,7 +28,7 @@ header {
 	display: none;
 }
 main {
-	background:url("../image/line-background1.png") center,linear-gradient(to bottom,#060C11 20%,#1C3C57);
+	background:url("../image/line-background1.png") center,linear-gradient(to bottom,#110A06 20%,#872C23);
 	padding-bottom: 100px;
 }
 section {
@@ -37,7 +37,7 @@ section {
 }
 footer {
 	height: 200px;
-	background-color: #050E16; 
+	background-color: #160505; 
 	padding-top: 48px;
 	position: relative;
 }
@@ -49,7 +49,7 @@ h3 {
 	letter-spacing: 8px;
 }
 .black-background {
-	background-color: black;
+	background-color: #160505;
 }
 #header-nav {
 	display: flex;
@@ -90,7 +90,7 @@ h3 {
 	text-decoration: underline
 }
 #first {
-	background-image: url("../image/first-background.jpg");
+	background-image: url("../image/first-background-red.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -99,7 +99,7 @@ h3 {
 #bf-intro {
 	position: absolute;
     bottom: 11vh;
-	background:rgba(28,60,87,0.66);
+	background:rgba(0,0,0,0.66);
     color: white;
     padding: 37px 90px;
     font-size: 35px;
@@ -146,8 +146,8 @@ h3 {
 	max-width: 550px;
 	min-width: 400px;
 	height: 220px;
-	background: #1C3C57;
-	opacity: .6;
+	background: #000;
+	opacity: .43;
 	z-index: 1;
 	position: absolute;
 }
@@ -240,7 +240,8 @@ h3 {
 }
 #practice p { 
     top: 62%;
-    right: 7%;
+	right: 7%;
+	margin-left: 80px;
 }
 #practice .green-circle {
     top: 52%;
@@ -299,7 +300,7 @@ h3 {
 }
 #two-product .product-block:first-child {
 	background-position: center;
-	background-image: url("../image/product01.jpg");
+	background-image: url("../image/product01red.jpg");
 }
 #two-product .product-block:last-child {
 	cursor: auto;
@@ -319,7 +320,7 @@ h3 {
 	align-items: center;
 }
 .product-line {
-	background: #4384BC;
+	background: #E01E0A;
 	width: 80px;
 	height: 7px;
 	border-radius: 50px;
@@ -461,7 +462,7 @@ h3 {
 		height: unset;
 	}
 	#header {
-		background: black;
+		background: #160505;
 		height: 60px;
 	}
 	#mini-menu {
@@ -508,7 +509,7 @@ h3 {
 	#bf-intro {
 		position: absolute;
 		bottom: 13vh;
-		background:rgba(28,60,87,0.66);
+		background:rgba(0,0,0,0.66);
 		color: white;
 		padding: 37px 0px 37px 16px;
 		width: 100vw;
@@ -550,7 +551,7 @@ h3 {
 		top: 70%;
 		right: -10%;
    		left: unset;
-		background: rgba(0,0,0,.35);
+		background: rgba(0,0,0,.8);
 		height: 140px;
 		width: 90%;
 	    max-width: unset;
@@ -565,6 +566,9 @@ h3 {
 		top: 75%;
     	left: 10%;
 		right: unset;	
+	}
+	#practice p {
+		margin-left: unset;
 	}
 	#product {
 		padding: 90px 0 90px;
