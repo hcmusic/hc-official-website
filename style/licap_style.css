@@ -447,7 +447,7 @@ h4 {
 @media (max-width: 670px) {
 	#slogan {
 		position: relative;
-		top: 60px;
+		margin-top: 60px;
 		height: 150px;
 	}
 	.show-block {
@@ -455,6 +455,10 @@ h4 {
 	}
 	#midi {
 		font-size: 25px;
+	}
+	#first {
+		height: fit-content;
+		min-height: unset;
 	}
 	#display {
 		flex-direction: column;
@@ -466,7 +470,12 @@ h4 {
 	#display img {
 		width: 70px;
 		margin: auto;
-		transform: rotate(70deg)
+	}
+	#rotate-right{
+		transform: translateY(60px) rotate(70deg);
+	}
+	#rotate-left{
+		transform: translateY(-60px) rotate(70deg);
 	}
 	#product {
 		margin-top: 20px;
@@ -474,9 +483,16 @@ h4 {
 	#info {
 		flex-direction: column-reverse;
 	}
+	#info img {
+		width: 80%;
+	}
 	#info-content {
 		width: 85%;
 		margin: 0px auto 21px;
+	}
+	#spec {
+		font-size: 15px;
+		min-width: inherit;
 	}
 	.every-spec {
 		margin-top: 30px;
