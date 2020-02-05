@@ -29,7 +29,7 @@ var animate = function() {
     renderer.render( scene, camera );
 }
 loader.load( './tdmodel/Cap.stl', function(obj) {
-    capMat = new THREE.MeshPhongMaterial({color: 0x660000, specular: 0x111111 , shininess: 50});
+    capMat = new THREE.MeshPhongMaterial({color: 0x222222, specular: 0x111111 , shininess: 50});
     obj.applyMatrix( new THREE.Matrix4().makeTranslation(-40, -13, -5));
     cap = new THREE.Mesh(obj, capMat);
     cap.position.z = -150;
