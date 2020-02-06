@@ -280,7 +280,7 @@ main input[name=faq-radios]{
 		padding-left: 12px;
     }
     #red-line{
-        opacity: 0.4;
+        opacity: 0.2;
     }
     #faq-title {
         font-size: 50px;
@@ -310,6 +310,9 @@ main input[name=faq-radios]{
     #qaa {
         overflow: unset;
         padding-left: 0px;
+    }
+    .qa-group:last-child{
+        margin-bottom: 30px;
     }
     #fr-live:checked ~ #faq-menu #fm-sel{ left: 0%; top: 23px;}
     #fr-recording:checked ~ #faq-menu #fm-sel{ left: 25%; top: 23px;}
