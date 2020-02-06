@@ -75,7 +75,7 @@ function rotateAnime(){
 rotRight.onclick = function(){
     cancelAnimationFrame(rotAnimeHandler)
     if(rotSpeed >= 0){
-        rotSpeed = -0.01;
+        rotSpeed = -0.02;
         rotAnimeHandler = requestAnimationFrame(rotateAnime);
     }else{
         rotSpeed = 0;
@@ -84,7 +84,7 @@ rotRight.onclick = function(){
 rotLeft.onclick = function(){
     cancelAnimationFrame(rotAnimeHandler)
     if(rotSpeed <= 0){
-        rotSpeed = 0.01;
+        rotSpeed = 0.02;
         rotAnimeHandler = requestAnimationFrame(rotateAnime);
     }else{
         rotSpeed = 0;
