@@ -45,48 +45,45 @@ loader.load( './tdmodel/Cap.stl', function(obj) {
 
 var mdx, mdy, crx, cry;
 var isMouseDown = false;
-displayElement.onmousedown = function(ev) {
+displayElement.addEventListener('mousedown', function(ev) {
+    document.getElementById("rotate-3d").style.display = "none";
     isMouseDown = true;
     mdx = ev.clientX;
     mdy = ev.clientY;
     crx = cap.rotation.x;
     cry = cap.rotation.y;
-}
-displayElement.onmouseup = function() {
+});
+displayElement.addEventListener('mouseup', function() {
     isMouseDown = false;
-}
-displayElement.onmousemove = function(ev) {
+})
+displayElement.addEventListener('mousemove', function(ev) {
     if(isMouseDown && isLoaded) {
         cap.rotation.y = cry + (ev.clientX - mdx)*0.015;
         cap.rotation.x = crx + (ev.clientY - mdy)*0.015;
         requestAnimationFrame( animate );
     }
-}
-
-var rotRight = document.getElementById("rotate-right");
-var rotLeft = document.getElementById("rotate-left");
-var rotSpeed = 0;
-var rotAnimeHandler = 0;
-function rotateAnime(){
-    cap.rotation.y += rotSpeed;
-    renderer.render( scene, camera );
-    rotAnimeHandler = requestAnimationFrame(rotateAnime);
-}
-rotRight.onclick = function(){
-    cancelAnimationFrame(rotAnimeHandler)
-    if(rotSpeed >= 0){
-        rotSpeed = -0.02;
-        rotAnimeHandler = requestAnimationFrame(rotateAnime);
-    }else{
-        rotSpeed = 0;
+});
+displayElement.addEventListener('touchmove', function(ev) {
+    if(ev.touches.length == 2){
+        document.getElementById("rotate-3d").style.display = "none";
+        document.getElementById("touch-tip").style.visibility = "hidden";
+        ev.preventDefault();
+        if(!isMouseDown){
+            isMouseDown = true;
+            mdx = ev.touches[0].clientX;
+            mdy = ev.touches[0].clientY;
+            crx = cap.rotation.x;
+            cry = cap.rotation.y;
+        }else{
+            if(isLoaded) {
+                cap.rotation.y = cry + (ev.touches[0].clientX - mdx)*0.015;
+                cap.rotation.x = crx + (ev.touches[0].clientY - mdy)*0.015;
+                requestAnimationFrame( animate );
+            }
+        }
+        
     }
-}
-rotLeft.onclick = function(){
-    cancelAnimationFrame(rotAnimeHandler)
-    if(rotSpeed <= 0){
-        rotSpeed = 0.02;
-        rotAnimeHandler = requestAnimationFrame(rotateAnime);
-    }else{
-        rotSpeed = 0;
-    }
-}
+});
+displayElement.addEventListener('touchend', function() {
+    isMouseDown = false;
+})

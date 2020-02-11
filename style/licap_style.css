@@ -92,12 +92,24 @@ h4 {
 	justify-content: center;
 }
 #display {
+	position: relative;
 	width: 80%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 #display img{
-	opacity: .5;
+	opacity: .3;
+}
+#rotate-3d{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	transform: translate(-50%, -50%);
+}
+#touch-tip {
+	display: none;
 }
 /*product*/
 #product{
@@ -392,6 +404,24 @@ h4 {
 		-webkit-text-stroke: unset;
 		color: #fff;
 	}
+	#touch-hand{
+		width: fit-content;
+		position: relative;
+		margin-bottom: 5px;
+		animation-name: touch-hand-move;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+	}
+	#touch-tip{
+		display: unset;
+		color:rgba(255,255,255,0.3);
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	@keyframes touch-hand-move {
+		from {	left: -30px;}
+		to {	left: 30px;}
+	}
 	#product h4 {
 		width: unset;
 		margin: 0 auto 20px;
@@ -468,15 +498,9 @@ h4 {
 	#licap-model {
 		text-align: center;
 	}
-	#display img {
-		width: 70px;
-		margin: auto;
-	}
-	#rotate-right{
-		transform: translateY(60px) rotate(70deg);
-	}
-	#rotate-left{
-		transform: translateY(-60px) rotate(70deg);
+	#rotate-3d{
+		width: 40px;
+		height: 40px;
 	}
 	#product {
 		margin-top: 20px;
