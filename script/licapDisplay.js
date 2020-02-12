@@ -10,7 +10,7 @@ if(window.innerWidth <= 670) {
 var camera = new THREE.PerspectiveCamera( 40, width/height , 0.1, 1000 );
 camera.position.z = 5;
 
-var renderer = new THREE.WebGLRenderer({alpha: true});
+var renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
 renderer.setSize( width, height);
 displayElement.appendChild( renderer.domElement );
 
@@ -29,15 +29,16 @@ var animate = function() {
     renderer.render( scene, camera );
 }
 loader.load( './tdmodel/Cap.stl', function(obj) {
-    capMat = new THREE.MeshPhongMaterial({color: 0x222222, specular: 0x111111 , shininess: 50});
-    obj.applyMatrix( new THREE.Matrix4().makeTranslation(-40, -13, -5));
+    capMat = new THREE.MeshPhongMaterial({color: 0x555555, specular: 0x111111 , shininess: 50});
+    obj.applyMatrix( new THREE.Matrix4().makeTranslation(-235,0,0));
+    obj.applyMatrix(new THREE.Matrix4().makeRotationZ(1.57))
     cap = new THREE.Mesh(obj, capMat);
-    cap.position.z = -150;
+    cap.position.z = -200;
     if(window.innerWidth <= 670) cap.position.z = -200;
     scene.add( cap );
     isLoaded = true;
     cap.rotation.y = -0.5;
-    cap.rotation.x = 0.3;
+    cap.rotation.x = 0.1;
     requestAnimationFrame( animate );
 }, undefined, function ( error ) {
     console.error( error );
