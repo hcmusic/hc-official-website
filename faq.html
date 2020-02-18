@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
 	<title>HcMusic</title>
-	<link rel="stylesheet" href="style/faq_style.css">
+    <link rel="stylesheet" href="style/faq_style.css">
 </head>
 <body>
     <div id="red-line"></div>
@@ -34,105 +34,155 @@
             <label for="fr-sharing" id="label-sharing"><li>Sharing</li></label>
             <label for="fr-practicing" id="label-practicing"><li>Practicing</li></label>
         </aside>
-        <section id="qaa">
-            <div class="qa-section" id="qa-live">
-                <input class="qa-checkbox" type="checkbox" id="live-q1">
-                <input class="qa-checkbox" type="checkbox" id="live-q2">
-                <input class="qa-checkbox" type="checkbox" id="live-q3">
-                <div class="qa-group qa-first" id="live-qa1">
-                    <label for="live-q1"><div class="qa-question">What's the difference between with and without a LiCAP on my guitar when I'm on the stage?</div>
-                    </label>
-                    <div class="qa-answer">LiCAP can help you triggers the soundpacks, like BFD3, Kontakt 5. Just like your midi keyboard with 6 strings to play.
-                            Make guitar great again.</div>
+        <section id="qaa" class="swiper-container">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <div class="qa-section swiper-slide" id="qa-live">
+                    <input class="qa-checkbox" type="checkbox" id="live-q1">
+                    <input class="qa-checkbox" type="checkbox" id="live-q2">
+                    <input class="qa-checkbox" type="checkbox" id="live-q3">
+                    <div class="qa-group qa-first" id="live-qa1">
+                        <label for="live-q1"><div class="qa-question">What's the difference between with and without a LiCAP on my guitar when I'm on the stage?</div>
+                        </label>
+                        <div class="qa-answer">LiCAP can help you triggers the soundpacks, like BFD3, Kontakt 5. Just like your midi keyboard with 6 strings to play.
+                                Make guitar great again.</div>
+                    </div>
+                    <div class="qa-group" id="live-qa2">
+                        <label for="live-q2"><div class="qa-question">Will LiCAP changes my live settings? I do not want any more cables on my settings.</div>
+                        </label>
+                        <div class="qa-answer">Absolutely NOT. It's a fully wireless device via Bluetooth. You're able to keep guitar jack to the amplifier or pedal as well.</div>
+                    </div>
+                    <div class="qa-group" id="live-qa3">
+                        <label for="live-q3"><div class="qa-question">Is it an effect?</div>
+                        </label>
+                        <div class="qa-answer">LiCAP is a wireless device that makes your guitar to a midi keyboard. No space needed. Install with only three seconds.</div>
+                    </div>
                 </div>
-                <div class="qa-group" id="live-qa2">
-                    <label for="live-q2"><div class="qa-question">Will LiCAP changes my live settings? I do not want any more cables on my settings.</div>
-                    </label>
-                    <div class="qa-answer">Absolutely NOT. It's a fully wireless device via Bluetooth. You're able to keep guitar jack to the amplifier or pedal as well.</div>
-                </div>
-                <div class="qa-group" id="live-qa3">
-                    <label for="live-q3"><div class="qa-question">Is it an effect?</div>
-                    </label>
-                    <div class="qa-answer">LiCAP is a wireless device that makes your guitar to a midi keyboard. No space needed. Install with only three seconds.</div>
-                </div>
-            </div>
 
-            <div class="qa-section" id="qa-recording">
-                <input class="qa-checkbox" type="checkbox" id="recording-q1">
-                <input class="qa-checkbox" type="checkbox" id="recording-q2">
-                <input class="qa-checkbox" type="checkbox" id="recording-q3">
-                <div class="qa-group qa-first" id="recording-qa1">
-                    <label for="recording-q1"><div class="qa-question">I am composer with my iPad. Is LiCAP able to use on a iPad?</div>
-                    </label>
-                    <div class="qa-answer">LiCAP is a bluetooth midi device. It can be used on Windows, MacOS, iOS, and Android.</div>
+                <div class="qa-section swiper-slide" id="qa-recording">
+                    <input class="qa-checkbox" type="checkbox" id="recording-q1">
+                    <input class="qa-checkbox" type="checkbox" id="recording-q2">
+                    <input class="qa-checkbox" type="checkbox" id="recording-q3">
+                    <div class="qa-group qa-first" id="recording-qa1">
+                        <label for="recording-q1"><div class="qa-question">I am composer with my iPad. Is LiCAP able to use on a iPad?</div>
+                        </label>
+                        <div class="qa-answer">LiCAP is a bluetooth midi device. It can be used on Windows, MacOS, iOS, and Android.</div>
+                    </div>
+                    <div class="qa-group" id="recording-qa2">
+                        <label for="recording-q2"><div class="qa-question">Can LiCAP detect the velocity and some complex chordes?</div>
+                        </label>
+                        <div class="qa-answer">LiCAP is powered py optical sensor system that capture each string's playing details, including pitch, velocity, aftertouch.</div>
+                    </div>
+                    <div class="qa-group" id="recording-qa3">
+                        <label for="recording-q3"><div class="qa-question">What's the difference between LiCAP and my keyboard?</div>
+                        </label>
+                        <div class="qa-answer">Guitar can perform some playing skill that keyboard can not imitate, and LiCAP can capture all the guitar playing skill 
+                                and tranfer it to MIDI</div>
+                    </div>
                 </div>
-                <div class="qa-group" id="recording-qa2">
-                    <label for="recording-q2"><div class="qa-question">Can LiCAP detect the velocity and some complex chordes?</div>
-                    </label>
-                    <div class="qa-answer">LiCAP is powered py optical sensor system that capture each string's playing details, including pitch, velocity, aftertouch.</div>
-                </div>
-                <div class="qa-group" id="recording-qa3">
-                    <label for="recording-q3"><div class="qa-question">What's the difference between LiCAP and my keyboard?</div>
-                    </label>
-                    <div class="qa-answer">Guitar can perform some playing skill that keyboard can not imitate, and LiCAP can capture all the guitar playing skill 
-                            and tranfer it to MIDI</div>
-                </div>
-            </div>
 
-            <div class="qa-section" id="qa-sharing">
-                <input class="qa-checkbox" type="checkbox" id="sharing-q1">
-                <input class="qa-checkbox" type="checkbox" id="sharing-q2">
-                <input class="qa-checkbox" type="checkbox" id="sharing-q3">
-                <div class="qa-group qa-first" id="sharing-qa1">
-                    <label for="sharing-q1"><div class="qa-question">What does the "Sharing" do?</div>
-                    </label>
-                    <div class="qa-answer">Actually, SLiMTAB provides a online and offline score editing experience. This means you can not only edit and share
-                            your sheet music to your friends, and also you can compose music with your friend. More over, you can rehearsal with your
-                            band online!</div>
+                <div class="qa-section swiper-slide" id="qa-sharing">
+                    <input class="qa-checkbox" type="checkbox" id="sharing-q1">
+                    <input class="qa-checkbox" type="checkbox" id="sharing-q2">
+                    <input class="qa-checkbox" type="checkbox" id="sharing-q3">
+                    <div class="qa-group qa-first" id="sharing-qa1">
+                        <label for="sharing-q1"><div class="qa-question">What does the "Sharing" do?</div>
+                        </label>
+                        <div class="qa-answer">Actually, SLiMTAB provides a online and offline score editing experience. This means you can not only edit and share
+                                your sheet music to your friends, and also you can compose music with your friend. More over, you can rehearsal with your
+                                band online!</div>
+                    </div>
+                    <div class="qa-group" id="sharing-qa2">
+                        <label for="sharing-q2"><div class="qa-question">How can I co-compose music with my partners?</div>
+                        </label>
+                        <div class="qa-answer">If your using SLiMTAB web application, you can share a link from your sheet music. Then, you can compose song with 
+                                your partners. If you install the SLiMTAB desktop app, you will need to upload the sheet music to SLiMTAB Cloud to co-compose.</div>
+                    </div>
+                    <div class="qa-group" id="sharing-qa3">
+                        <label for="sharing-q3"><div class="qa-question">Rehearsal online seems to be an ideal approach to practice with my band, but how does the SLiMTAB acutaully do? Is there
+                                any delay?</div>
+                        </label>
+                        <div class="qa-answer">Sure, we have over come the delay issue that every user worried. If you and your band have a common internet environment.
+                                You can rehearsal with your band without annoying delay.</div>
+                    </div>
                 </div>
-                <div class="qa-group" id="sharing-qa2">
-                    <label for="sharing-q2"><div class="qa-question">How can I co-compose music with my partners?</div>
-                    </label>
-                    <div class="qa-answer">If your using SLiMTAB web application, you can share a link from your sheet music. Then, you can compose song with 
-                            your partners. If you install the SLiMTAB desktop app, you will need to upload the sheet music to SLiMTAB Cloud to co-compose.</div>
-                </div>
-                <div class="qa-group" id="sharing-qa3">
-                    <label for="sharing-q3"><div class="qa-question">Rehearsal online seems to be an ideal approach to practice with my band, but how does the SLiMTAB acutaully do? Is there
-                            any delay?</div>
-                    </label>
-                    <div class="qa-answer">Sure, we have over come the delay issue that every user worried. If you and your band have a common internet environment.
-                            You can rehearsal with your band without annoying delay.</div>
-                </div>
-            </div>
 
-            <div class="qa-section" id="qa-practicing">
-                <input class="qa-checkbox" type="checkbox" id="practicing-q1">
-                <input class="qa-checkbox" type="checkbox" id="practicing-q2">
-                <input class="qa-checkbox" type="checkbox" id="practicing-q3">
-                <div class="qa-group qa-first" id="practicing-qa1">
-                    <label for="practicing-q1"><div class="qa-question">Without LiCAP, can I still do the Practice service?</div>
-                    </label>
-                    <div class="qa-answer">SLiMTAB make for guitar practice sytem with a LiCAP on your guitar. But, other usual midi device can
-                            also connect to SLiMTAB to practice.</div>
-                </div>
-                <div class="qa-group" id="practicing-qa2">
-                    <label for="practicing-q2"><div class="qa-question">Can I edit my musical score that I just found?</div>
-                    </label>
-                    <div class="qa-answer">SLiMTAB has a powerful score editing UI, with modern and intuitive interface. SLiMTAB can also 
-                            cloud co-compose and share your master piece.</div>
-                </div>
-                <div class="qa-group" id="practicing-qa3">
-                    <label for="practicing-q3"><div class="qa-question">I am a Guitar Pro user, can I load a .gpx file to practice?</div>
-                    </label>
-                    <div class="qa-answer">SLiMTAB can import Guitar Pro and other MIDI files, and even import plugins, soundpacks like IK, and 
-                            Steiberg.</div>
+                <div class="qa-section swiper-slide" id="qa-practicing">
+                    <input class="qa-checkbox" type="checkbox" id="practicing-q1">
+                    <input class="qa-checkbox" type="checkbox" id="practicing-q2">
+                    <input class="qa-checkbox" type="checkbox" id="practicing-q3">
+                    <div class="qa-group qa-first" id="practicing-qa1">
+                        <label for="practicing-q1"><div class="qa-question">Without LiCAP, can I still do the Practice service?</div>
+                        </label>
+                        <div class="qa-answer">SLiMTAB make for guitar practice sytem with a LiCAP on your guitar. But, other usual midi device can
+                                also connect to SLiMTAB to practice.</div>
+                    </div>
+                    <div class="qa-group" id="practicing-qa2">
+                        <label for="practicing-q2"><div class="qa-question">Can I edit my musical score that I just found?</div>
+                        </label>
+                        <div class="qa-answer">SLiMTAB has a powerful score editing UI, with modern and intuitive interface. SLiMTAB can also 
+                                cloud co-compose and share your master piece.</div>
+                    </div>
+                    <div class="qa-group" id="practicing-qa3">
+                        <label for="practicing-q3"><div class="qa-question">I am a Guitar Pro user, can I load a .gpx file to practice?</div>
+                        </label>
+                        <div class="qa-answer">SLiMTAB can import Guitar Pro and other MIDI files, and even import plugins, soundpacks like IK, and 
+                                Steiberg.</div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 </body>
+<script src="script/swiper.min.js"></script>
 <script>
     let faq = document.getElementById("nav-faq-label")
     faq.classList.add("on-this-page")
+
+    var w = document.body.clientWidth;
+    var h = document.body.clientHeight;
+
+    function isMobile(){
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    data: {
+                        1: 'recording',
+                    },
+                    renderBullet: function (index, className) {
+                        let s = ''
+                        if(index == 0) {
+                            s = 'Live'
+                        } else if (index == 1) {
+                            s = 'Recording'
+                        } else if (index == 2) {
+                            s = 'Sharing'
+                        } else {
+                            s = 'Practicing'
+                        }
+                        return '<span class="' + className + '">' + s + '</span>';
+                    },
+                }
+                
+            },
+        );
+    }
+    if(w < 670){
+        console.log('is Mobile')
+        isMobile();
+    }
+
+    if(w > 670 || w == 670) {
+        window.onresize = function(){
+            var w = document.body.clientWidth;
+            var h = document.body.clientHeight;
+            if(w < 670){
+                console.log('is Mobile')
+                isMobile();
+            }
+        }
+    }
+    
 </script>
 </html>

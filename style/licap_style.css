@@ -104,8 +104,8 @@ h4 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 40px;
-	height: 40px;
+	width: 25%;
+    max-width: 250px;
 	transform: translate(-50%, -50%);
 }
 #touch-tip {
@@ -502,8 +502,7 @@ h4 {
 		text-align: center;
 	}
 	#rotate-3d{
-		width: 40px;
-		height: 40px;
+		width: 150px;
 	}
 	#product {
 		margin-top: 20px;

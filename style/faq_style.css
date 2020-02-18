@@ -237,6 +237,10 @@ main input[name=faq-radios]{
 #practicing-q3:checked ~ #practicing-qa3 .qa-answer { display: block; }
 #practicing-q3:checked ~ #practicing-qa3 .qa-question::after { transform: rotate(180deg); }
 
+.swiper-pagination {
+    display: none;
+}
+
 @media (max-width: 670px) {
     body{ 
 		overflow-x: hidden;
@@ -294,7 +298,7 @@ main input[name=faq-radios]{
     #faq-menu {
         padding-left: 0px;
         border-right: none;
-        display: grid;
+        display: none;
         grid-template-columns: 25% 25% 25% 25%;
     }
     #faq-menu li{
@@ -318,13 +322,46 @@ main input[name=faq-radios]{
     #fr-recording:checked ~ #faq-menu #fm-sel{ left: 25%; top: 23px;}
     #fr-sharing:checked ~ #faq-menu #fm-sel{ left: 50%; top: 23px;}
     #fr-practicing:checked ~ #faq-menu #fm-sel{ left: 75%; top: 23px;}
-
-    #fr-live:checked ~ #qaa #qa-live{ visibility: visible; left: 0px; }
+    
+    .swiper-pagination {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        margin: 25px 0 25px;
+    }
+    .swiper-pagination span {
+        font-size: 14px;
+        text-align: center;
+        line-height: 35px;
+    }
+    .swiper-pagination-bullet {
+        color: #928C8C;
+        transition: background-color .3s ease;
+    }
+    .swiper-pagination-bullet-active {
+        color: white;
+        background: #FF0909;
+    }
+    /* #fr-live:checked ~ #qaa #qa-live{ visibility: visible; left: 0px; }
     #fr-recording:checked ~ #qaa #qa-recording{ visibility: visible; left: 0px; }
     #fr-sharing:checked ~ #qaa #qa-sharing{ visibility: visible; left: 0px; }
-    #fr-practicing:checked ~ #qaa #qa-practicing{ visibility: visible; left: 0px; }
+    #fr-practicing:checked ~ #qaa #qa-practicing{ visibility: visible; left: 0px; } */
     .qa-section {
         width: 100%;
+    }
+    #qaa #qa-live {
+        left: 0px  !important;
+    }
+    #qaa #qa-sharing {
+        left: 200% !important;
+    }
+    #qaa #qa-practicing {
+        left: 300%;
+    }
+    .swiper-slide-active {
+        visibility: visible !important;
+    }
+    .swiper-slide-prev, .swiper-slide-next {
+        visibility: hidden !important;
     }
     .qa-question {
         font-size: 18px;
