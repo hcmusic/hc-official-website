@@ -33,7 +33,7 @@ loader.load( './tdmodel/Cap.stl', function(obj) {
     obj.applyMatrix( new THREE.Matrix4().makeTranslation(-235,0,0));
     obj.applyMatrix(new THREE.Matrix4().makeRotationZ(1.57))
     cap = new THREE.Mesh(obj, capMat);
-    cap.position.z = -200;
+    cap.position.z = -height*0.35;
     if(window.innerWidth <= 670) cap.position.z = -200;
     scene.add( cap );
     isLoaded = true;
