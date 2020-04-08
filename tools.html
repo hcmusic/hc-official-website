@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+	<title>About</title>
+	<link rel="stylesheet" href="style/tools_style.css">
+</head>
+<body>
+    <header id="header" class="black-background">
+		<a href="index.html"><img id="top-logo" src="image/logo.svg" alt=""></a>
+		<label for="menu-toggle"><img id="mini-menu" src="image/icon/mini-menu.png" alt=""></label>
+		<input type="checkbox" id="menu-toggle"/>
+		<nav id="header-nav">
+			<!-- need modify height in #menu-toggle:checked+#header-nav if add element -->
+			<a href="index.html"><li>HOME</li></a>
+			<a href="licap.html"><li>LiCAP</li></a>
+			<!-- <li>SLiMTAB</li> -->
+			<a href="about.html"><li id="nav-about-label">ABOUT</li></a>
+			<a href="faq.html"><li>FAQ</li></a>
+			<a href="about.html#footer"><li>CONTACT US</li></a>
+		</nav>
+    </header>
+    <main>
+        <section id="beat-tool">
+			<h2 id="beat-tool-title">Beat detection tool</h2>
+			<input type="radio" name="file-source" id="fs-file" checked/><label for="fs-file">From local file</label>
+			<input type="radio" name="file-source" id="fs-youtube" /><label for="fs-youtube">From Youtube URL</label>
+			<div id="fs-block">
+				<div class="fs-sel-block" id="file-block">
+					<input id="sel-file" type="file"/>
+				</div>
+				<div class="fs-sel-block" id="youtube-block">
+					<input id="sel-youtube" type="url" placeholder="Youtube URL" />
+				</div>
+			</div>
+			<button id="cal-btn">Caculate</button>
+			<div id="display-bpm"></div>
+		</section>
+    </main>
+    <footer id="footer">
+        <div id="footer-nav">
+			<div class="footer-series">
+				<div class="footer-btn">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="">ABOUT</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="">WORK WITH US</a></li>
+				</div>
+				<div id="footer-link">
+					<img src="image/icon/twitter.svg" alt="">
+					<img src="image/icon/facebook.svg" alt="">
+					<img src="image/icon/youtube.svg" alt="">
+					<img src="image/icon/instagram.svg" alt="">
+				</div>
+			</div>
+			<div class="footer-series">
+				<p style="cursor:unset;">(+886)937-626-316</p>
+				<p style="cursor:unset;">contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+				<p style="cursor:unset;">10F., No. 6-1, Sec. 1, Mingde Rd., Tucheng Dist., <br>New Taipei City 236, Taiwan</p>
+			</div>
+		</div>
+		<div id="phone-footer-nav">
+			<div class="footer-btn">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="">ABOUT</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="">WORK WITH US</a></li>
+			</div>
+			<div id="footer-link">
+				<img src="image/icon/twitter.svg" alt="">
+				<img src="image/icon/facebook.svg" alt="">
+				<img src="image/icon/youtube.svg" alt="">
+				<img src="image/icon/instagram.svg" alt="">
+			</div>
+			<div class="contact-block">
+				<p style="cursor:unset;">(+886)937-626-316</p>
+				<p>contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
+				<p style="cursor:unset;">10F., No. 6-1, Sec. 1, Mingde Rd., Tucheng Dist., <br>New Taipei City 236, Taiwan</p>
+			</div>
+		</div>
+		<p class="copyight">Copyright © 2019 HcMusic  CO. LTD. All Rights Reserved.</p>
+    </footer>
+</body>
+<script src="script/audio.js"></script>
+<script>
+	let about = document.getElementById('nav-about-label');
+	about.classList.add("on-this-page")
+</script>
+</html>
