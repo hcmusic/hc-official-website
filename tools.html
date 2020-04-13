@@ -23,12 +23,16 @@
     </header>
     <main>
         <section id="beat-tool">
-			<h2 id="beat-tool-title">Beat detection tool</h2>
+			<h2 id="beat-tool-title"><img src="image/music.png" width="70" />Beat detection tool</h2>
+			<div id="intro">
+				The tool can detect your music's BPM. Just select file from your device or paste url from Youtube, and then click Calculate.
+			</div>
 			<input type="radio" name="file-source" id="fs-file" checked/><label for="fs-file">From local file</label>
 			<input type="radio" name="file-source" id="fs-youtube" /><label for="fs-youtube">From Youtube URL</label>
 			<div id="fs-block">
 				<div class="fs-sel-block" id="file-block">
 					<input id="sel-file" type="file"/>
+					<div style="font-size: 12px;">support mp3 and wav file</div>
 				</div>
 				<div class="fs-sel-block" id="youtube-block">
 					<input id="sel-youtube" type="url" placeholder="Youtube URL" />
@@ -36,6 +40,7 @@
 			</div>
 			<button id="cal-btn">Caculate</button>
 			<div id="display-bpm"></div>
+			<progress id="progress-bar" value="0"></progress>
 		</section>
     </main>
     <footer id="footer">

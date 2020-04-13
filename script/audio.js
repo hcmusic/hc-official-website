@@ -33,6 +33,7 @@ async function requstBPM(fileBlob){
 }
 
 async function loadFile(){
+    progressBar.style.display = "unset";
     let fileBuffer;
     calBtn.disabled = true;
     genLoadingAnimate();
@@ -43,14 +44,14 @@ async function loadFile(){
             resolve();
         };
     });
-
+    setProgressBar(0.2);
     await new Promise((resolve) => {
         audioCtx.decodeAudioData(fileBuffer, (buffer) => {
             fileBuffer = buffer;
             resolve();
         });
     });
-
+    setProgressBar(0.4);
     let c1 = fileBuffer.getChannelData(0);
     let c2 = fileBuffer.getChannelData(0);
     c1 = trimAudioBuffer(c1, 5, 20, fileBuffer.sampleRate);
@@ -64,12 +65,15 @@ async function loadFile(){
                 resolve();
             };
         });
+        setProgressBar(0.8);
         clearInterval(loadingAnimate);
         genCalAnimate();
         let bpm = await requstBPM(data);
+        setProgressBar(1);
         clearInterval(calAnimate);
         display.innerHTML = `estimated bpm: ${bpm}`;
         calBtn.disabled = false;
+        progressBar.style.display = "none";
     })();
 }
 
@@ -103,4 +107,10 @@ function genCalAnimate() {
         display.innerHTML +=".";
         totalDot++;
     }, 100);
+}
+
+let progressBar = document.getElementById("progress-bar");
+progressBar.style.display = "none";
+function setProgressBar(value) {
+    progressBar.value = String(value);
 }

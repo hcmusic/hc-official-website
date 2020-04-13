@@ -55,7 +55,12 @@ h4 {
 #beat-tool-title {
 	padding-top: 50px;
 }
-
+#intro {
+	word-break: break-all;
+	width: 550px;
+	margin: 30px auto;
+	text-align: left;
+}
 .fs-sel-block {display: none;}
 #fs-block { 
 	padding: 10px 30px; 
@@ -68,6 +73,7 @@ h4 {
 #fs-file:checked ~ #fs-block > #file-block {display: block;}
 #fs-youtube:checked ~ #fs-block > #youtube-block {display: block;}
 #sel-youtube {width: 100%;}
+#progress-bar { width: 380px;}
 
 #header-nav {
 	display: flex;
