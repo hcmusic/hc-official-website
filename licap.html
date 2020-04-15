@@ -140,6 +140,78 @@
 				</div>
 			</div>
 		</section>
+		<section id="liccon">
+			<div class="banner">
+				<h2>LiCCON</h2>
+				<p>LiCCON is an all in one tool for LiCAP.</p>
+			</div>
+			<p class="liccon-des">
+				Including midi mapping, sampler & firmware update.<br>
+				It allows you to select any fret to any midi channel, or you can drop any sound file to any frets on your fingerboard, which means you can play multiple instruments and custom sound on your guitar at the same time! It is able to adjust velocity and midi CC just like other midi editors, too!
+			</p>
+			<!-- 上方提示框 -->
+			<div class="des-block">
+				<div class="info-des user-setting">
+					<span class="close-btn" onclick="closeThis('user-setting')"></span>
+					<p>ああああああああああああああああああああ</p>
+				</div>
+				<div class="info-des edit-function">
+					<span class="close-btn" onclick="closeThis('edit-functiong')"></span>
+					<p>ああああああああああああああああああああ</p>
+				</div>
+			</div>
+			<!-- LICCON視窗+開啟點+線 -->
+			<div id="liccon-window"> 
+				<div id="liccon-line">
+					<!-- <svg class="svg-block user-setting" height="300" width="250"> -->
+					<svg class="svg-block user-setting" viewBox="0 0 250 300">
+						<polyline class="svg-line user-setting" points="100,270 20,270 20,50 50,50" />
+					</svg>
+					<svg class="svg-block show-playtime" height="350" width="250">
+						<polyline class="svg-line show-playtime" points="150,40 60,40 60,330 " />
+					</svg>
+					<svg class="svg-block select-zone" height="350" width="250">
+						<polyline class="svg-line select-zone" points="200,70 200,130 150,130 150, 215" />
+					</svg>
+					<svg class="svg-block select-dot" height="350" width="300">
+						<polyline class="svg-line select-dot" points="0,25 250,25 250,330 210,330" />
+					</svg>
+					<svg class="svg-block edit-function" height="500" width="300">
+						<polyline class="svg-line edit-function" points="210,480 250,480 250,50 190,50" />
+					</svg>
+				</div>
+				<img id="main" src="./image/liccon/main.png" alt="">
+				<div class="show-info user-setting" id="user-setting" onclick="showThis('user-setting')"></div>
+				<div class="show-info show-playtime" id="show-playtime" onclick="showThis('show-playtime')"></div>
+				<div class="show-info select-zone" id="select-zone" onclick="showThis('select-zone')"></div>
+				<div class="show-info select-dot" id="select-dot" onclick="showThis('select-dot')"></div>
+				<div class="show-info edit-function" id="edit-function" onclick="showThis('edit-function')"></div>
+				<!-- 改變圖像 -->
+				<img class="img-change show-playtime" src="./image/liccon/img-playtime.png" alt="">
+				<img class="img-change select-zone not-show" src="./image/liccon/img-unselect-zone.png" alt="">
+				<img class="img-change select-zone" src="./image/liccon/img-select-zone.png" alt="">
+				<img class="img-change select-zone parameter" src="./image/liccon/img-select-zone-parameter.png" alt="">
+				<img class="img-change select-dot not-show" src="./image/liccon/img-unselect-dot.png" alt="">
+				<img class="img-change select-dot" src="./image/liccon/img-select-dot.png" alt="">
+				<img class="img-change select-dot parameter" src="./image/liccon/img-select-dot-parameter.png" alt="">
+			</div>
+			<!-- 下方提示框 -->
+			<div class="des-block">
+				<div class="info-des show-playtime">
+					<span class="close-btn" onclick="closeThis('show-playtime')"></span>
+					<p>ああああああああああああああああああああ</p>
+				</div>
+				<div class="info-des select-zone">
+					<span class="close-btn" onclick="closeThis('select-zone')"></span>
+					<p>ああああああああああああああああああああ</p>
+				</div>
+				<div class="info-des select-dot">
+					<span class="close-btn" onclick="closeThis('select-dot')"></span>
+					<p>ああああああああああああああああああああ</p>
+				</div>
+			</div>
+
+		</section>
 	</main>
 	<footer id="footer">
 		<div id="footer-nav">
@@ -198,6 +270,7 @@
 	let licap = document.getElementById('nav-licap-label');
 	licap.classList.add("on-this-page")
 </script>
+<script src="script/licconWindow.js"></script>
 <script src="https://threejs.org/build/three.min.js"></script>
 <script src="lib/STLLoader.js"></script>
 <script src="script/licapDisplay.js"></script>

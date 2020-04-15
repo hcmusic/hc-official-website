@@ -251,6 +251,262 @@ h4 {
 	opacity: .4;
 	z-index: 1;
 }
+/* liccon */
+#liccon {
+	height: unset;
+	padding-bottom: 5vh;
+}
+.banner {
+	background-color: #e01e0a;
+	width: 100%;
+	height: 135px;
+}
+.banner h2 {
+	color: #fff;
+	font-size: 5em;
+	font-weight: bold;
+	margin: 0 0 0 10%;
+}
+.banner p {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 0 0 10%;
+}
+
+.liccon-des{
+	width: 80%;
+    max-width: 1000px;
+    margin: 35px auto 0;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+#liccon-line {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+.svg-block.user-setting{
+	position: absolute;
+	top: -150px;
+	left: -50px;
+	height: 60%;
+    max-height: 300px;
+}
+.svg-block.show-playtime {
+	position: absolute;
+	bottom: -50px;
+	left: 80px;
+}
+.svg-block.select-zone {
+	position: absolute;
+	bottom: -23%;
+    left: 36%;
+}
+.svg-block.select-dot {
+	right: -7%;
+    position: absolute;
+    bottom: -12%;
+}
+.svg-block.edit-function{
+	position: absolute;
+    right: -7%;
+    top: -20%;
+}
+.svg-line{
+	stroke-width: 2;
+	stroke: #c1c1c1;
+	fill: none;
+	stroke-dashoffset: 600;
+	stroke-dasharray: 600;
+}
+.svg-line.is-show {
+	animation: drawing 1.5s forwards;
+}
+@keyframes drawing {
+	100%{
+		stroke-dashoffset: 0;
+	}
+}
+
+#liccon-window{
+	width: 85%;
+	margin: 3vh  7.5% 0;
+	position: relative;
+}
+#main {
+	width: 100%;
+	position: relative;
+}
+.show-info{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #c1c1c1;
+	animation: jump 1.5s infinite;
+	cursor: pointer;
+	z-index: 3;
+}
+.show-info::after,.show-info::before{
+	content: '';
+	width: 15px;
+	height: 4px;
+	background: #1a1515;
+	position: absolute;
+	border-radius: 15px;
+	top: 14px;
+	left: 7.5px;
+}
+.show-info::before{
+	transform: rotate(90deg);
+	left: 8px;
+}
+.show-info.is-show {
+	display: none;
+}
+.show-info:hover{
+	animation: unset;
+}
+@keyframes jump {
+	0%{
+		box-shadow: 0 0 0 5px rgba(255,255,255,.5);
+	}
+	100%{
+		box-shadow: 0 0 0 8px rgba(255,255,255,0);
+	}
+}
+
+.des-block{
+	position: relative;
+	height: 140px;
+	margin: 30px 7.5% 0;
+}
+.info-des{
+	opacity: 0;
+	position: absolute;
+	/* width: 295px; */
+	width: 29%;
+	min-height: 95px;
+	padding: 30px 1% 10px;
+	/* padding: 30px 10px 10px; */
+	background: rgba(0,0,0,.5);
+	color: white;
+	margin-top: 200px;
+	transition: .5s .5s;
+	display: flex;
+	align-items: center;
+}
+.info-des.select-zone {
+	left: 32%;
+}
+.info-des.select-dot,.info-des.edit-function {
+	left: 64%;
+}
+.close-btn {
+	z-index: 10;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    display: flex;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+    left: 0px;
+}
+.close-btn::after, .close-btn::before{
+	content:'';
+	position: absolute;
+	width: 15px;
+	height: 2px;
+	background: white;
+	top: 15px;
+	left: 10px;
+}
+.close-btn::after{
+	transform: rotate(45deg);
+}
+.close-btn::before{
+	transform: rotate(-45deg);
+}
+.info-des p{
+	margin: 0;
+}
+#user-setting {
+	top: 15%;
+	left: 10%;
+}
+#show-playtime {
+	bottom: 35%;
+	left: 25%;
+}
+#select-zone {
+	bottom: 20%;
+	left: 50%;
+}
+#select-dot {
+	bottom:34%;
+    right: 26%;
+}
+#edit-function {
+	top: 40%;
+	right: 5%;
+}
+.is-show {
+	opacity: 1;
+	margin-top: 0;
+}
+.img-change {
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	transition: ease .5s;
+}
+.img-change.is-show {
+	opacity: 1;
+}
+.img-change.show-playtime {
+	bottom: 20%;
+    left: 20.1%;
+    width: 21.5%;
+}
+.img-change.select-zone{
+	bottom: 16.5%;
+	left: 51%;
+	width: 35%;
+}
+.img-change.select-dot {
+	width: 2.5%;
+    bottom: 32%;
+    right: 23.8%;
+}
+.img-change.select-zone.parameter {
+	top: 8%;
+    left: 20%;
+    width: 35%;
+}
+.img-change.select-dot.parameter {
+	width: 35%;
+    top: 8%;
+    left: 56%;
+}
+.img-change.select-zone.not-show {
+	bottom: 17%;
+	opacity: 1;
+}
+.img-change.select-dot.not-show {
+	bottom: 32.5%;
+	opacity: 1;
+}
+.img-change.select-zone.not-show.is-show,.img-change.select-dot.not-show.is-show{
+	opacity: 0;
+}
+
+
+
+
 /*footer區塊*/
 #phone-footer-nav {
 	display: none;
