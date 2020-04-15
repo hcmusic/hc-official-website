@@ -273,7 +273,9 @@ h4 {
 	font-weight: bold;
 	margin: 0 0 0 10%;
 }
-
+#liccon-on-mobile {
+	display: none;
+}
 .liccon-des{
 	width: 80%;
     max-width: 1000px;
@@ -298,22 +300,35 @@ h4 {
 .svg-block.show-playtime {
 	position: absolute;
 	bottom: -50px;
-	left: 80px;
+	left: 5%;
+	height: 50%;
+	max-height: 480px;
+	/* left: 80px; */
 }
 .svg-block.select-zone {
 	position: absolute;
-	bottom: -23%;
-    left: 36%;
+	bottom: -24%;
+	left: 36%;
+	height: 50%;
+    /* max-height: 450px; */
 }
 .svg-block.select-dot {
-	right: -7%;
+	right: -9%;
+	height: 50%;
     position: absolute;
     bottom: -12%;
 }
 .svg-block.edit-function{
 	position: absolute;
     right: -7%;
-    top: -20%;
+	top: -20%;
+	height: 70%;
+}
+.svg-block.set-parameter {
+	position: absolute;
+	top: -5%;
+	left: 38%;
+	height: 47%;
 }
 .svg-line{
 	stroke-width: 2;
@@ -333,7 +348,8 @@ h4 {
 
 #liccon-window{
 	width: 85%;
-	margin: 3vh  7.5% 0;
+	max-width: 1366px;
+	margin: 3vh  auto 0;
 	position: relative;
 }
 #main {
@@ -349,6 +365,8 @@ h4 {
 	animation: jump 1.5s infinite;
 	cursor: pointer;
 	z-index: 3;
+	transition: ease .5s;
+	transform: rotate(0deg);
 }
 .show-info::after,.show-info::before{
 	content: '';
@@ -357,18 +375,24 @@ h4 {
 	background: #1a1515;
 	position: absolute;
 	border-radius: 15px;
-	top: 14px;
-	left: 7.5px;
+	top: 13px;
+	left: 8px;
 }
 .show-info::before{
 	transform: rotate(90deg);
 	left: 8px;
 }
+.show-info::after {
+	opacity: 1;
+}
 .show-info.is-show {
-	display: none;
+	transform: rotate(90deg);
+}
+.show-info.is-show::after{
+	opacity: 0;
 }
 .show-info:hover{
-	animation: unset;
+	/* animation: unset; */
 }
 @keyframes jump {
 	0%{
@@ -382,11 +406,17 @@ h4 {
 .des-block{
 	position: relative;
 	height: 140px;
-	margin: 30px 7.5% 0;
+	margin: 30px auto 0;
+    width: 85%;
+	max-width: 1366px;
+	
+	display: flex;
+	justify-content: space-between;
 }
 .info-des{
 	opacity: 0;
-	position: absolute;
+	position: relative;
+	/* position: absolute; */
 	/* width: 295px; */
 	width: 29%;
 	min-height: 95px;
@@ -394,18 +424,13 @@ h4 {
 	/* padding: 30px 10px 10px; */
 	background: rgba(0,0,0,.5);
 	color: white;
-	margin-top: 200px;
+	/* margin-top: 200px; */
 	transition: .5s .5s;
 	display: flex;
 	align-items: center;
 }
-.info-des.select-zone {
-	left: 32%;
-}
-.info-des.select-dot,.info-des.edit-function {
-	left: 64%;
-}
-.close-btn {
+
+/* .close-btn {
 	z-index: 10;
     position: absolute;
     height: 30px;
@@ -430,7 +455,7 @@ h4 {
 }
 .close-btn::before{
 	transform: rotate(-45deg);
-}
+} */
 .info-des p{
 	margin: 0;
 }
@@ -439,24 +464,28 @@ h4 {
 	left: 10%;
 }
 #show-playtime {
-	bottom: 35%;
-	left: 25%;
+	bottom: 30%;
+	left: 28%;
 }
 #select-zone {
-	bottom: 20%;
+	bottom: 25%;
 	left: 50%;
 }
 #select-dot {
-	bottom:34%;
+	bottom: 36%;
     right: 26%;
 }
 #edit-function {
-	top: 40%;
+	top: 42%;
 	right: 5%;
+}
+#set-parameter {
+	top: 25%;
+    left: 55%;
 }
 .is-show {
 	opacity: 1;
-	margin-top: 0;
+	/* margin-top: 0; */
 }
 .img-change {
 	position: absolute;
@@ -731,6 +760,25 @@ h4 {
 		margin: 20px auto 0;
 		font-size: 12px;
 	}
+
+
+	/* liccon on mobile */
+	.des-block, #liccon-window{
+		display: none;
+	}
+	#liccon-on-mobile {
+		display: block;
+	}
+	#mobile-main {
+		width: 100vw;
+		margin-top: 45px;
+	}
+
+
+
+
+
+
 }
 
 /*specific style for licap*/

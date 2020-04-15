@@ -152,11 +152,12 @@
 			<!-- 上方提示框 -->
 			<div class="des-block">
 				<div class="info-des user-setting">
-					<span class="close-btn" onclick="closeThis('user-setting')"></span>
+					<p>ああああああああああああああああああああ</p>
+				</div>
+				<div class="info-des set-parameter">
 					<p>ああああああああああああああああああああ</p>
 				</div>
 				<div class="info-des edit-function">
-					<span class="close-btn" onclick="closeThis('edit-functiong')"></span>
 					<p>ああああああああああああああああああああ</p>
 				</div>
 			</div>
@@ -167,50 +168,56 @@
 					<svg class="svg-block user-setting" viewBox="0 0 250 300">
 						<polyline class="svg-line user-setting" points="100,270 20,270 20,50 50,50" />
 					</svg>
-					<svg class="svg-block show-playtime" height="350" width="250">
-						<polyline class="svg-line show-playtime" points="150,40 60,40 60,330 " />
+					<svg class="svg-block show-playtime" viewBox="0 0 250 350">
+						<polyline class="svg-line show-playtime" points="150,40 60,40 60,320 " />
 					</svg>
-					<svg class="svg-block select-zone" height="350" width="250">
-						<polyline class="svg-line select-zone" points="200,70 200,130 150,130 150, 215" />
+					<svg class="svg-block select-zone" viewBox="0 0 250 350">
+						<polyline class="svg-line select-zone" points="200,70 200,130 150,130 150, 200" />
 					</svg>
-					<svg class="svg-block select-dot" height="350" width="300">
+					<svg class="svg-block select-dot" viewBox="0 0 300 350">
 						<polyline class="svg-line select-dot" points="0,25 250,25 250,330 210,330" />
 					</svg>
-					<svg class="svg-block edit-function" height="500" width="300">
-						<polyline class="svg-line edit-function" points="210,480 250,480 250,50 190,50" />
+					<svg class="svg-block edit-function"  viewBox="0 0 300 500">
+						<polyline class="svg-line edit-function" points="210,480 250,480 250,50 230,50" />
+					</svg>
+					<svg class="svg-block set-parameter" viewBox="0 0 250 300">
+						<polyline class="svg-line set-parameter" points="170,180 170,100 110,100 110,15" />
 					</svg>
 				</div>
 				<img id="main" src="./image/liccon/main.png" alt="">
-				<div class="show-info user-setting" id="user-setting" onclick="showThis('user-setting')"></div>
-				<div class="show-info show-playtime" id="show-playtime" onclick="showThis('show-playtime')"></div>
-				<div class="show-info select-zone" id="select-zone" onclick="showThis('select-zone')"></div>
-				<div class="show-info select-dot" id="select-dot" onclick="showThis('select-dot')"></div>
-				<div class="show-info edit-function" id="edit-function" onclick="showThis('edit-function')"></div>
+				<div class="show-info user-setting" id="user-setting" onclick="showThisA('user-setting')"></div>
+				<div class="show-info show-playtime" id="show-playtime" onclick="showThisB('show-playtime')"></div>
+				<div class="show-info select-zone" id="select-zone" onclick="showThisC('select-zone')"></div>
+				<div class="show-info select-dot" id="select-dot" onclick="showThisD('select-dot')"></div>
+				<div class="show-info edit-function" id="edit-function" onclick="showThisE('edit-function')"></div>
+				<div class="show-info set-parameter" id="set-parameter" onclick="showThisF('set-parameter')"></div>
 				<!-- 改變圖像 -->
 				<img class="img-change show-playtime" src="./image/liccon/img-playtime.png" alt="">
 				<img class="img-change select-zone not-show" src="./image/liccon/img-unselect-zone.png" alt="">
 				<img class="img-change select-zone" src="./image/liccon/img-select-zone.png" alt="">
-				<img class="img-change select-zone parameter" src="./image/liccon/img-select-zone-parameter.png" alt="">
+				<img class="img-change select-zone parameter set-parameter" src="./image/liccon/img-select-zone-parameter.png" alt="">
 				<img class="img-change select-dot not-show" src="./image/liccon/img-unselect-dot.png" alt="">
 				<img class="img-change select-dot" src="./image/liccon/img-select-dot.png" alt="">
-				<img class="img-change select-dot parameter" src="./image/liccon/img-select-dot-parameter.png" alt="">
+				<img class="img-change select-dot parameter set-parameter" src="./image/liccon/img-select-dot-parameter.png" alt="">
 			</div>
 			<!-- 下方提示框 -->
 			<div class="des-block">
 				<div class="info-des show-playtime">
-					<span class="close-btn" onclick="closeThis('show-playtime')"></span>
+					<!-- <span class="close-btn" onclick="closeThis('show-playtime')"></span> -->
 					<p>ああああああああああああああああああああ</p>
 				</div>
 				<div class="info-des select-zone">
-					<span class="close-btn" onclick="closeThis('select-zone')"></span>
+					<!-- <span class="close-btn" onclick="closeThis('select-zone')"></span> -->
 					<p>ああああああああああああああああああああ</p>
 				</div>
 				<div class="info-des select-dot">
-					<span class="close-btn" onclick="closeThis('select-dot')"></span>
+					<!-- <span class="close-btn" onclick="closeThis('select-dot')"></span> -->
 					<p>ああああああああああああああああああああ</p>
 				</div>
 			</div>
-
+			<div id="liccon-on-mobile">
+				<img id="mobile-main" src="./image/liccon/main.png" alt="">
+			</div>
 		</section>
 	</main>
 	<footer id="footer">
