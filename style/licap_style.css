@@ -538,7 +538,7 @@ h4 {
 #liccon-download {
 	height: 30vh;
 	min-height: 300px;
-	margin-bottom: 30px;
+	margin-bottom: 70px;
 }
 #liccon-download h5 {
 	text-align: center;
@@ -548,11 +548,21 @@ h4 {
 }
 .download-block {
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	justify-content: space-between;
 	width: 80vw;
 	max-width: 760px;
 	margin: 30px auto ;
+}
+.download-btn-block {
+	width: 33%;
+	max-width: 220px;
+	margin: 0 5px;
+}
+.download-tip-text {
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 0;
 }
 .download-btn {
 	border: solid 1px black;
@@ -562,12 +572,12 @@ h4 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 33%;
-    max-width: 220px;
+	/* width: 33%;
+	max-width: 220px; */
+	width: 100%;
 	padding: 20px 0px;
 	position: relative;
 	cursor: pointer;
-	margin: 0 5px;
 }
 .download-btn img {
 	width: 10%;
@@ -834,6 +844,9 @@ h4 {
 	.banner {
 		height: 165px;
 	}
+	.banner h2, .banner p {
+		margin: 0 0 0 10px;
+	}
 	.des-block, #liccon-window{
 		display: none;
 	}
@@ -946,9 +959,11 @@ h4 {
 	.download-block {
 		flex-direction: column;
 	}
-	.download-btn {
-		margin: 15px 0;
-		width: 50vw;
+	.download-btn-block {
+		width: 85%;
+		max-width: unset;
+		min-width: 150px;
+		margin: 10px auto;
 	}
 }
 
