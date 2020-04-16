@@ -763,21 +763,97 @@ h4 {
 
 
 	/* liccon on mobile */
+	.banner {
+		height: 165px;
+	}
 	.des-block, #liccon-window{
 		display: none;
 	}
 	#liccon-on-mobile {
 		display: block;
-	}
-	#mobile-main {
-		width: 100vw;
+		position: relative;
 		margin-top: 45px;
 	}
-
-
-
-
-
+	#mobile-zoom {
+		width: 100vw;
+		background-image: url("../image/liccon/main.png");
+		height: 300px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 50 50;
+		transition: ease .5s;
+		position: relative;
+	}
+	.mobile-dot.mobile-is-show {
+		transform: rotate(90deg)
+	}
+	.mobile-des {
+		background-color: #c1c1c1;
+		color: white;
+		width: 90vw;
+		height: 200px;
+		opacity: 0;
+		transition: ease 0.5s;
+		margin: 10px auto 0;
+	}
+	.mobile-des.mobile-is-show {
+		opacity: 1;
+	}
+	.show-info.mobile-is-show::after{
+		opacity: 0;
+	}
+	#user-setting{
+		top: 0%;
+		left: 10%;
+	}
+	#set-parameter {
+		top: 8%;
+	}
+	#edit-function {
+		top: 19%;
+	}
+	#show-playtime {
+		bottom: unset;
+		top: 25%;
+	}
+	#select-zone {
+		bottom: unset;
+		top: 35%;
+	}
+	.mobile-zone-parameter,.mobile-dot-parameter {
+		opacity: 0;
+		position: absolute;
+		top: 15%;
+		width: 60%;
+		
+	}
+	.mobile-dot-parameter {
+		left: 62%;
+	}
+	.mobile-zone-parameter.mobile-is-show,.mobile-dot-parameter.mobile-is-show {
+		opacity: 1;
+		transition: ease .5s .5s;
+	}
+	.mobile-show-playtime {
+		opacity: 0;
+		position: absolute;
+		top: 24%;
+		left: 4%;
+		height: 60%;
+	}
+	.mobile-show-playtime.mobile-is-show {
+		opacity: 1;
+		transition: ease .5s .5s;
+	}
+	.mobile-select-zone {
+		opacity: 0;
+		position: absolute;
+    	top: 44%;
+	}
+	.mobile-select-zone.mobile-is-show {
+		opacity: 1;
+		transition: ease .5s .5s;
+	}
 
 }
 

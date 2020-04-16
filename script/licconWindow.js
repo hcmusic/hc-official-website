@@ -137,11 +137,50 @@ function showThisF(obj){
         objF = false
     }
 }
-// function closeThis(obj){
-//     let m = document.getElementsByClassName(obj)
-//     for(i=0;i<m.length;i++){
-//         if(m[i].tagName !== "svg") {
-//             m[i].classList.remove("is-show")
-//         }
-//     }
-// }
+
+var zoom = false
+function zoomThis(n,x,y,z) {
+    let result = document.getElementById('mobile-zoom')
+    let dot = document.getElementsByClassName('mobile-dot')
+    if(!zoom) {
+        // document.getElementById('mobile-zoom').scrollIntoView({
+        //     behavior: "smooth"
+        // })
+        for(let i=0;i<dot.length;i++) {
+            if(!dot[i].outerHTML.includes(n)){
+                dot[i].style.display = 'none';
+            }
+        }
+        result.style.backgroundPosition = "-" + x + "px -" + y+ "px";
+        result.style.backgroundSize =  z + "px"
+        mobileShow(n)
+        zoom = true
+    } else {
+        for(let i=0;i<dot.length;i++) {
+            if(!dot[i].outerHTML.includes(n)){
+                dot[i].style.display = 'block';
+            }
+        }
+        result.style.backgroundSize =  "100%"
+        result.style.backgroundPosition = "0 0";
+        mobileShow(n)
+        zoom = false
+    }
+}
+
+function mobileShow(obj) {
+    let m = document.getElementsByClassName('mobile-des')
+    let n = document.getElementsByClassName(obj)
+    if(!zoom) {
+        m[0].classList.add('mobile-is-show')
+        for(let i=0;i<n.length;i++){
+            n[i].classList.add('mobile-is-show')
+        }
+    } else {
+        m[0].classList.remove('mobile-is-show')
+        for(let i=0;i<n.length;i++){
+            n[i].classList.remove('mobile-is-show')
+        }
+    }
+    
+}
