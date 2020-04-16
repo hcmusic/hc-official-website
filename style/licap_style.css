@@ -86,7 +86,7 @@ h4 {
 	text-decoration: underline
 }
 #first {
-	background-color: #666;
+	background-color: #160505;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -188,6 +188,7 @@ h4 {
 	border-radius: 0  20px 20px 0;
 	margin-right: 5%;
 }
+
 .every-spec {
 	width: 80%;
 	margin: 60px auto 0;
@@ -533,9 +534,76 @@ h4 {
 	opacity: 0;
 }
 
-
-
-
+/* download區塊 */
+#liccon-download {
+	height: 30vh;
+	min-height: 300px;
+	margin-bottom: 30px;
+}
+#liccon-download h5 {
+	text-align: center;
+	font-size: 2.5em;
+    margin-top: 0;
+    text-align: center;
+}
+.download-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80vw;
+	max-width: 760px;
+	margin: 30px auto ;
+}
+.download-btn {
+	border: solid 1px black;
+	border-radius: 15px;
+	background: transparent;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 33%;
+    max-width: 220px;
+	padding: 20px 0px;
+	position: relative;
+	cursor: pointer;
+	margin: 0 5px;
+}
+.download-btn img {
+	width: 10%;
+	min-width: 50px;
+	margin-left: 10px;
+}
+.logo-unhover,.download-btn:hover .logo-hover {
+	display: block;
+	opacity: 1;
+	transition: ease .5s;
+	z-index: 1;
+}
+.logo-hover,.download-btn:hover .logo-unhover {
+	display: none;
+	opacity: 0;
+}
+.download-btn::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 100%;
+	background: white;
+	border-radius: 15px;
+	z-index: -2;
+}
+.download-btn:hover, .download-btn:hover img {
+	color: white;
+}
+.download-btn:hover::before {
+	transition: ease 0.5s;
+	background: black;
+	width: 100%;
+	
+}
 /*footer區塊*/
 #phone-footer-nav {
 	display: none;
@@ -820,6 +888,11 @@ h4 {
 		bottom: unset;
 		top: 35%;
 	}
+	#select-dot {
+		bottom: unset;
+		right: 15%;
+		top: 30%;
+	}
 	.mobile-zone-parameter,.mobile-dot-parameter {
 		opacity: 0;
 		position: absolute;
@@ -854,7 +927,29 @@ h4 {
 		opacity: 1;
 		transition: ease .5s .5s;
 	}
+	.mobile-select-dot {
+		opacity: 0;
+		position: absolute;
+		top: 43%;
+		right: 27%;
+	}
+	.mobile-select-dot.mobile-is-show {
+		opacity: 1;
+		transition: ease .5s .5s;
+	}
 
+	/* download */
+	#liccon-download {
+		height: 50vh;
+		min-height: 550px;
+	}
+	.download-block {
+		flex-direction: column;
+	}
+	.download-btn {
+		margin: 15px 0;
+		width: 50vw;
+	}
 }
 
 /*specific style for licap*/

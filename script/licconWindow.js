@@ -173,6 +173,7 @@ function mobileShow(obj) {
     let n = document.getElementsByClassName(obj)
     if(!zoom) {
         m[0].classList.add('mobile-is-show')
+        // m[0].innerHTML = `${123}`
         for(let i=0;i<n.length;i++){
             n[i].classList.add('mobile-is-show')
         }
