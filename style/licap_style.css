@@ -444,22 +444,27 @@ h4 {
 }
 #liccon-download h5 {
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 2.1em;
     margin-top: 0;
     text-align: center;
 }
 .download-block {
 	display: flex;
-	align-items: baseline;
-	justify-content: space-between;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	width: 80vw;
 	max-width: 760px;
 	margin: 30px auto ;
 }
+.download-block img {
+	width: 50px;
+	margin-left: 15px;
+}
 .download-btn-block {
 	width: 33%;
 	max-width: 220px;
-	margin: 0 5px;
+	margin: 20px 5px;
 }
 .download-tip-text {
 	text-align: center;
@@ -669,8 +674,8 @@ h4 {
 
 	/* download */
 	#liccon-download {
-		height: 50vh;
-		min-height: 550px;
+		/* height: 50vh;
+		min-height: 550px; */
 	}
 	.download-block {
 		flex-direction: column;
