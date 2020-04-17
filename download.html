@@ -104,6 +104,10 @@
 		}
 	};
 	let home = document.getElementById("nav-home-label");
-	home.classList.add("on-this-page")
+    home.classList.add("on-this-page")
+    
+    if(sessionStorage != ''){
+        let n = sessionStorage.getItem('download-select')
+    }
 </script>
 </html>

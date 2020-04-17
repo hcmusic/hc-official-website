@@ -245,7 +245,7 @@
 					<img src="./image/icon/logo-windows.svg" alt="">
 				</div>
 				<div class="download-btn-block">
-					<div class="download-btn">
+					<div onclick="jumpDownload()" class="download-btn">
 						<p>Download</p>
 					</div>
 				</div>
@@ -326,6 +326,11 @@
 	};
 	let licap = document.getElementById('nav-licap-label');
 	licap.classList.add("on-this-page")
+
+	function jumpDownload(){
+		sessionStorage.setItem('download-select', 'liccon')
+		window.location.href = "download.html"
+	}
 </script>
 <script src="script/licconWindow.js"></script>
 <script src="https://threejs.org/build/three.min.js"></script>
