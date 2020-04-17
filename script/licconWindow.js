@@ -183,5 +183,20 @@ function mobileShow(obj) {
             n[i].classList.remove('mobile-is-show')
         }
     }
-    
+}
+
+function zoomOut(){
+    let result = document.getElementById('mobile-zoom')
+    let dot = document.getElementsByClassName('mobile-dot')
+    let is_show = document.querySelectorAll('.mobile-is-show')
+    console.log(is_show)
+    for(let i=0;i<dot.length;i++) {
+            dot[i].style.display = 'block';
+    }
+    for(let j=0;j<is_show.length;j++){
+        is_show[j].classList.remove('mobile-is-show')
+    }
+    result.style.backgroundSize =  "100%"
+    result.style.backgroundPosition = "0 0";
+    zoom = false
 }
