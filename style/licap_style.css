@@ -349,18 +349,26 @@ h4 {
 	/* width: 295px; */
 	width: 29%;
 	min-height: 95px;
-	padding: 30px 1% 10px;
+	padding: 5px;
 	/* padding: 30px 10px 10px; */
 	background: rgba(0,0,0,.5);
 	color: white;
 	/* margin-top: 200px; */
 	transition: .5s .5s;
-	display: flex;
-	align-items: center;
+	/* display: flex;
+	align-items: center; */
 }
 
 .info-des p{
 	margin: 0;
+}
+.info-des p:first-child, .mobile-des p:first-child {
+	font-weight: bolder;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+.info-des p:last-child, .mobile-des p:last-child{
+	font-size: 0.9em;
 }
 #user-setting {
 	top: 15%;
@@ -435,7 +443,10 @@ h4 {
 .img-change.select-zone.not-show.is-show,.img-change.select-dot.not-show.is-show{
 	opacity: 0;
 }
-
+.img-change.select-instrument {
+	width: 15%;
+    top: 46%;
+}
 /* download區塊 */
 #liccon-download {
 	height: 30vh;

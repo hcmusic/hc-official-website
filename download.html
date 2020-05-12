@@ -107,7 +107,11 @@
     home.classList.add("on-this-page")
     
     if(sessionStorage != ''){
-        let n = sessionStorage.getItem('download-select')
+		let n = sessionStorage.getItem('download-select')
+		if (n == 'liccon') {
+			document.getElementById('software-liccon').click();
+			sessionStorage.setItem('download-select', '')
+		}
     }
 </script>
 </html>

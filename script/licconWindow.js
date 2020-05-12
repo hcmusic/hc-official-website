@@ -173,7 +173,32 @@ function mobileShow(obj) {
     let n = document.getElementsByClassName(obj)
     if(!zoom) {
         m[0].classList.add('mobile-is-show')
-        // m[0].innerHTML = `${123}`
+        switch (obj) {
+            case 'user-setting':
+                m[0].getElementsByTagName('P')[0].innerHTML = 'Preset'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Click "plus" button to create your own preset or choose default setting to have a quick demonstration'
+                break
+            case 'set-parameter':
+                m[0].getElementsByTagName('P')[0].innerHTML = 'Group Setting'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Adjust midi cc parameter in detail'
+                break
+            case 'edit-function':
+                m[0].getElementsByTagName('P')[0].innerHTML = 'Tool Bar'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Click "plus" button and frame the area you want to define, or choose others tool to edit your custom fingerboard'
+                break
+            case 'show-playtime':
+                m[0].getElementsByTagName('P')[0].innerHTML = 'Note Display'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Display every note you play on guitar (send by LiCAP)'
+                break
+            case 'select-zone':
+                m[0].getElementsByTagName('P')[0].innerHTML = 'Instrument Zone'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Each note in the same zone has the same setting above'
+                break
+            case 'select-dot':
+                m[0].getElementsByTagName('P')[0].innerHTML = 'Single sampler'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Drop any wav or mp3 file into a single fret, it will play your sample file while you play this fret'
+                break
+        }
         for(let i=0;i<n.length;i++){
             n[i].classList.add('mobile-is-show')
         }
