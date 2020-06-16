@@ -1,9 +1,12 @@
-var objA = false
-var objB = false
-var objC = false
-var objD = false
-var objE = false
-var objF = false
+var objA = true
+var objB = true
+var objC = true
+var objD = true
+var objE = true
+var objF = true
+var objG = true
+var objH = true
+var objI = true
 
 function showThisA(obj){
     if(!objA) {
@@ -138,6 +141,66 @@ function showThisF(obj){
     }
 }
 
+function showThisG(obj){
+    if(!objG) {
+        let m = document.getElementsByClassName(obj)
+        for(i=0;i<m.length;i++){
+            if(m[i].tagName !== "svg") {
+                m[i].classList.add("is-show")
+            }
+        }
+        objG = true
+    } else {
+        let m = document.getElementsByClassName(obj)
+        for(i=0;i<m.length;i++){
+            if(m[i].tagName !== "svg") {
+                m[i].classList.remove("is-show")
+            }
+        }
+        objG = false
+    }
+}
+
+function showThisH(obj){
+    if(!objH) {
+        let m = document.getElementsByClassName(obj)
+        for(i=0;i<m.length;i++){
+            if(m[i].tagName !== "svg") {
+                m[i].classList.add("is-show")
+            }
+        }
+        objH = true
+    } else {
+        let m = document.getElementsByClassName(obj)
+        for(i=0;i<m.length;i++){
+            if(m[i].tagName !== "svg") {
+                m[i].classList.remove("is-show")
+            }
+        }
+        objH = false
+    }
+}
+
+function showThisI(obj){
+    if(!objI) {
+        let m = document.getElementsByClassName(obj)
+        for(i=0;i<m.length;i++){
+            if(m[i].tagName !== "svg") {
+                m[i].classList.add("is-show")
+            }
+        }
+        objI = true
+    } else {
+        let m = document.getElementsByClassName(obj)
+        for(i=0;i<m.length;i++){
+            if(m[i].tagName !== "svg") {
+                m[i].classList.remove("is-show")
+            }
+        }
+        objI = false
+    }
+}
+
 var zoom = false
 function zoomThis(n,x,y,z) {
     let result = document.getElementById('mobile-zoom')
@@ -197,6 +260,18 @@ function mobileShow(obj) {
             case 'select-dot':
                 m[0].getElementsByTagName('P')[0].innerHTML = 'Single sampler'
                 m[0].getElementsByTagName('P')[1].innerHTML = 'Drop any wav or mp3 file into a single fret, it will play your sample file while you play this fret'
+                break
+            case 'global-setting':
+                m[0].getElementsByTagName('P')[0].innerHTML = 'Global Setting'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Shift your Midi CC or adjust midi mode to MPE or traditional'
+                break
+            case 'show-bluetooth':
+                m[0].getElementsByTagName('p')[0].innerHTML = 'Bluetooth'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Check your device is connected while use everytime'
+                break
+            case 'show-battery':
+                m[0].getElementsByTagName('p')[0].innerHTML = 'Battery'
+                m[0].getElementsByTagName('P')[1].innerHTML = 'Monitoring your licap on the corner of LiCCON'
                 break
         }
         for(let i=0;i<n.length;i++){

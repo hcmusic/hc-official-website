@@ -229,7 +229,7 @@ h4 {
 .svg-block.show-playtime {
 	position: absolute;
 	bottom: -50px;
-	left: 5%;
+	left: 23%;
 	height: 50%;
 	max-height: 480px;
 	/* left: 80px; */
@@ -242,7 +242,7 @@ h4 {
     /* max-height: 450px; */
 }
 .svg-block.select-dot {
-	right: -9%;
+	right: 0%;
 	height: 50%;
     position: absolute;
     bottom: -12%;
@@ -258,6 +258,22 @@ h4 {
 	top: -5%;
 	left: 38%;
 	height: 47%;
+}
+.svg-block.global-setting {
+	position: absolute;
+	height: 70%;
+}
+.svg-block.show-bluetooth {
+	position: absolute;
+	height: 50%;
+	bottom: -15%;
+    left: -5%;
+}
+.svg-block.show-battery {
+	position: absolute;
+	height: 50%;
+	right: -5%;
+	bottom: -19%;
 }
 .svg-line{
 	stroke-width: 2;
@@ -342,30 +358,30 @@ h4 {
 	display: flex;
 	justify-content: space-between;
 }
+
 .info-des{
 	opacity: 0;
 	position: relative;
-	/* position: absolute; */
-	/* width: 295px; */
-	width: 29%;
+	width: 23%;
 	min-height: 95px;
 	padding: 5px;
-	/* padding: 30px 10px 10px; */
 	background: rgba(0,0,0,.5);
 	color: white;
-	/* margin-top: 200px; */
 	transition: .5s .5s;
-	/* display: flex;
-	align-items: center; */
+}
+
+
+.bottom .info-des {
+	width: 18%;
 }
 
 .info-des p{
 	margin: 0;
 }
 .info-des p:first-child, .mobile-des p:first-child {
-	font-weight: bolder;
     margin-bottom: 5px;
-    font-size: 1.2em;
+	font-size: 1.2em;
+	font-family: 'Righteous', cursive;
 }
 .info-des p:last-child, .mobile-des p:last-child{
 	font-size: 0.9em;
@@ -393,6 +409,18 @@ h4 {
 #set-parameter {
 	top: 25%;
     left: 55%;
+}
+#global-setting {
+	top: 40%;
+    left: 5%;
+}
+#show-bluetooth {
+	bottom: 7%;
+	left: 5%;
+}
+#show-battery {
+	bottom: 5%;
+    right: 12%;
 }
 .is-show {
 	opacity: 1;
@@ -534,7 +562,7 @@ h4 {
 }
 
 /*common style*/
-@media (max-width: 670px) {
+@media (max-width: 767px) {
 	h3 {
 		-webkit-text-stroke: unset;
 		color: #fff;
@@ -638,12 +666,23 @@ h4 {
 		right: 15%;
 		top: 30%;
 	}
+	#global-setting {
+		top: 25%;
+    	left: 5%;
+	}
+	#show-bluetooth {
+		top: 40%;
+		left: 0%;
+	}
+	#show-battery {
+		top: 43%;
+		left: unset;
+	}
 	.mobile-zone-parameter,.mobile-dot-parameter {
 		opacity: 0;
 		position: absolute;
 		top: 15%;
 		width: 60%;
-		
 	}
 	.mobile-dot-parameter {
 		left: 62%;

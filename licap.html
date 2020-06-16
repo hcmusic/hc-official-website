@@ -47,59 +47,6 @@
 				</div>
 				<img src="./image/old_licap_boom.jpg" alt="">
 			</div>
-			<!-- <div id="up-spec">
-				<div id="in-spec">
-					<div id="spec">
-						<h4>Spec</h4>
-						<div class="every-spec">
-							<div class="spec-block">
-								<div class="title">Dimension</div>
-								<div class="spec-content">105x24x6mm (LxWxH)</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">Bluetooth</div>
-								<div class="spec-content">Bluetooth 5.0 BLE</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">RF Range</div>
-								<div class="spec-content">15M</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">Battery Life</div>
-								<div class="spec-content">at least 2hrs /</div>
-							</div>
-							<div class="spec-block">
-								<div class="title"></div>
-								<div class="spec-content">200hrs in stand by</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">USB</div>
-								<div class="spec-content">support USB PD3.0</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">Weight</div>
-								<div class="spec-content">220g</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">Warranty</div>
-								<div class="spec-content">1 year</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">Accessory</div>
-								<div class="spec-content">USB Charger /</div>
-							</div>
-							<div class="spec-block">
-								<div class="title"></div>
-								<div class="spec-content">Type C Cable</div>
-							</div>
-							<div class="spec-block">
-								<div class="title">Software</div>
-								<div class="spec-content">LiCON</div>
-							</div>
-						</div>
-					</div>
-				</div>				
-			</div> -->
 		</section>
 		<section id="spec">
 			<h4>Technical Specs</h4>
@@ -153,15 +100,19 @@
 			</p>
 			<!-- 上方提示框 -->
 			<div class="des-block">
-				<div class="info-des user-setting">
+				<div class="info-des user-setting is-show">
 					<p>Preset</p>
 					<p>Click "plus" button to create your own preset or choose default setting to have a quick demonstration</p>
 				</div>
-				<div class="info-des set-parameter">
+				<div class="info-des global-setting is-show">
+					<p>Global Setting</p>
+					<p>Shift your Midi CC or adjust midi mode to MPE or traditional</p>
+				</div>
+				<div class="info-des set-parameter is-show">
 					<p>Group Setting</p>
 					<p>Adjust midi cc parameter in detail</p>
 				</div>
-				<div class="info-des edit-function">
+				<div class="info-des edit-function is-show">
 					<p>Tool Bar</p>
 					<p>Click "plus" button and frame the area you want to define, or choose others tool to edit your custom fingerboard</p>
 				</div>
@@ -171,59 +122,81 @@
 				<div id="liccon-line">
 					<!-- <svg class="svg-block user-setting" height="300" width="250"> -->
 					<svg class="svg-block user-setting" viewBox="0 0 250 300">
-						<polyline class="svg-line user-setting" points="100,270 20,270 20,50 50,50" />
+						<polyline class="svg-line user-setting is-show" points="100,270 20,270 20,50 50,50" />
 					</svg>
 					<svg class="svg-block show-playtime" viewBox="0 0 250 350">
-						<polyline class="svg-line show-playtime" points="150,40 60,40 60,320 " />
+						<polyline class="svg-line show-playtime is-show" points="60,120 60,320 " />
 					</svg>
 					<svg class="svg-block select-zone" viewBox="0 0 250 350">
-						<polyline class="svg-line select-zone" points="200,70 200,130 150,130 150, 200" />
+						<polyline class="svg-line select-zone is-show" points="200,70 200,130 150,130 150, 200" />
 					</svg>
-					<svg class="svg-block select-dot" viewBox="0 0 300 350">
-						<polyline class="svg-line select-dot" points="0,25 250,25 250,330 210,330" />
+					<svg class="svg-block select-dot" viewBox="0 0 300 280">
+						<polyline class="svg-line select-dot is-show" points="120,25 250,25 250,150 60,150 60,220" />
 					</svg>
 					<svg class="svg-block edit-function"  viewBox="0 0 300 500">
-						<polyline class="svg-line edit-function" points="210,480 250,480 250,50 230,50" />
+						<polyline class="svg-line edit-function is-show" points="210,480 250,480 250,50 230,50" />
 					</svg>
 					<svg class="svg-block set-parameter" viewBox="0 0 250 300">
-						<polyline class="svg-line set-parameter" points="170,180 170,100 110,100 110,15" />
+						<polyline class="svg-line set-parameter is-show" points="170,180 170,100 230,100 230,15" />
+					</svg>
+					<svg class="svg-block global-setting" viewBox="0 0 500 500">
+						<polyline class="svg-line global-setting is-show" points="120,300 370,300 370,0">
+					</svg>
+					<svg class="svg-block show-bluetooth" viewBox="0 0 250 300">
+						<polyline class="svg-line show-bluetooth is-show" points="70,150 20,150  20,270 35,270" />
+					</svg>
+					<svg class="svg-block show-battery" viewBox="0 0 250 300">
+						<polyline class="svg-line show-battery is-show" points="110,145 220,145 220,270 210,270" />
 					</svg>
 				</div>
 				<img id="main" src="./image/liccon/main.png" alt="">
-				<div class="show-info user-setting" id="user-setting" onclick="showThisA('user-setting')"></div>
-				<div class="show-info show-playtime" id="show-playtime" onclick="showThisB('show-playtime')"></div>
-				<div class="show-info select-zone" id="select-zone" onclick="showThisC('select-zone')"></div>
-				<div class="show-info select-dot" id="select-dot" onclick="showThisD('select-dot')"></div>
-				<div class="show-info edit-function" id="edit-function" onclick="showThisE('edit-function')"></div>
-				<div class="show-info set-parameter" id="set-parameter" onclick="showThisF('set-parameter')"></div>
+				<div class="show-info user-setting is-show" id="user-setting" onclick="showThisA('user-setting')"></div>
+				<div class="show-info show-playtime is-show" id="show-playtime" onclick="showThisB('show-playtime')"></div>
+				<div class="show-info select-zone is-show" id="select-zone" onclick="showThisC('select-zone')"></div>
+				<div class="show-info select-dot is-show" id="select-dot" onclick="showThisD('select-dot')"></div>
+				<div class="show-info edit-function is-show" id="edit-function" onclick="showThisE('edit-function')"></div>
+				<div class="show-info set-parameter is-show" id="set-parameter" onclick="showThisF('set-parameter')"></div>
+				<div class="show-info global-setting is-show" id="global-setting" onclick="showThisG('global-setting')"></div>
+				<div class="show-info show-bluetooth is-show" id="show-bluetooth" onclick="showThisH('show-bluetooth')"></div>
+				<div class="show-info show-battery is-show" id="show-battery" onclick="showThisI('show-battery')"></div>
 				<!-- 改變圖像 -->
-				<img class="img-change show-playtime" src="./image/liccon/img-playtime.png" alt="">
-				<img class="img-change select-zone select-instrument" src="./image/liccon/img-instrument-select.png" alt="">
+				<img class="img-change show-playtime is-show" src="./image/liccon/img-playtime.png" alt="">
+				<img class="img-change select-zone select-instrument is-show" src="./image/liccon/img-instrument-select.png" alt="">
 				<img class="img-change select-zone not-show" src="./image/liccon/img-unselect-zone.png" alt="">
-				<img class="img-change select-zone" src="./image/liccon/img-select-zone.png" alt="">
-				<img class="img-change select-zone parameter set-parameter" src="./image/liccon/img-select-zone-parameter.png" alt="">
+				<img class="img-change select-zone is-show" src="./image/liccon/img-select-zone.png" alt="">
+				<img class="img-change select-zone parameter set-parameter is-show" src="./image/liccon/img-select-zone-parameter.png" alt="">
 				<img class="img-change select-dot not-show" src="./image/liccon/img-unselect-dot.png" alt="">
-				<img class="img-change select-dot" src="./image/liccon/img-select-dot.png" alt="">
+				<img class="img-change select-dot is-show" src="./image/liccon/img-select-dot.png" alt="">
 				<!-- <img class="img-change select-dot not-show" src="./image/liccon/img-unselect-sampler.png" alt="">
 				<img class="img-change select-dot" src="./image/liccon/img-select-sampler.png" alt=""> -->
 				<img class="img-change select-dot parameter set-parameter" src="./image/liccon/img-select-dot-parameter.png" alt="">
 			</div>
 			<!-- 下方提示框 -->
-			<div class="des-block">
-				<div class="info-des show-playtime">
+			<div class="des-block bottom">
+				<div class="info-des show-bluetooth is-show">
+					<!-- <span class="close-btn" onclick="closeThis('show-playtime')"></span> -->
+					<p>Bluetooth</p>
+					<p>Check your device is connected while use everytime</p>
+				</div>
+				<div class="info-des show-playtime is-show">
 					<!-- <span class="close-btn" onclick="closeThis('show-playtime')"></span> -->
 					<p>Note Display</p>
 					<p>Display every note you play on guitar (send by LiCAP)</p>
 				</div>
-				<div class="info-des select-zone">
+				<div class="info-des select-zone is-show">
 					<!-- <span class="close-btn" onclick="closeThis('select-zone')"></span> -->
 					<p>Instrument Zone</p>
 					<p>each note in the same zone has the same setting above</p>
 				</div>
-				<div class="info-des select-dot">
+				<div class="info-des select-dot is-show">
 					<!-- <span class="close-btn" onclick="closeThis('select-dot')"></span> -->
 					<p>single sampler</p>
 					<p>drop any wav or mp3 file into a single fret, it will play your sample file while you play this fret</p>
+				</div>
+				<div class="info-des show-battery is-show">
+					<!-- <span class="close-btn" onclick="closeThis('show-playtime')"></span> -->
+					<p>Battery</p>
+					<p>Monitoring your licap on the corner of LiCCON</p>
 				</div>
 			</div>
 			<!-- 手機板 -->
@@ -241,6 +214,9 @@
 				<div class="show-info show-playtime mobile-dot" id="show-playtime" onclick="zoomThis('show-playtime',170,250,900)"></div>
 				<div class="show-info select-zone mobile-dot" id="select-zone" onclick="zoomThis('select-zone',350,300,900)"></div>
 				<div class="show-info select-dot mobile-dot" id="select-dot" onclick="zoomThis('select-dot',450,270,900)"></div>
+				<div class="show-info global-setting mobile-dot" id="global-setting" onclick="zoomThis('global-setting',0,150,900)"></div>
+				<div class="show-info show-bluetooth mobile-dot" id="show-bluetooth" onclick="zoomThis('show-bluetooth',0,350,900)"></div>
+				<div class="show-info show-battery mobile-dot" id="show-battery" onclick="zoomThis('show-battery',550,350,900)"></div>
 				<div id="mobile-des" class="mobile-des">
 					<p></p>
 					<p></p>
@@ -299,7 +275,7 @@
 			<div class="footer-series">
 				<p style="cursor:unset;">(+886)937-626-316</p>
 				<p style="cursor:unset;">contact<img class="email-at" src="image/icon/at.svg" alt="">thehcmusic.com</p>
-				<p style="cursor:unset;">10F., No. 6-1, Sec. 1, Mingde Rd., Tucheng Dist., <br>New Taipei City 236, Taiwan</p>
+				<p style="cursor:unset;">No. 3, Ln. 51, Chelutou St., Sanchong Dist., <br>New Taipei City 241, Taiwan</p>
 			</div>
 		</div>
 		<div id="phone-footer-nav">
